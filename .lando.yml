@@ -16,4 +16,4 @@ tooling:
   drush:
     service: appserver
     env:
-      DRUSH_OPTIONS_URI: 'https://my-project.lndo.site'
+      DRUSH_OPTIONS_URI: 'https://kristyglassickdevelop.lndo.site'
