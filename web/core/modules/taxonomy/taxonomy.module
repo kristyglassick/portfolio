@@ -87,7 +87,7 @@ function taxonomy_theme_suggestions_taxonomy_term(array $variables) {
 }
 
 /**
- * Prepares variables for taxonomy term templates.
+ * Prepares variables for taxonomy term 04-templates.
  *
  * Default template: taxonomy-term.html.twig.
  *
@@ -131,7 +131,7 @@ function template_preprocess_taxonomy_term(&$variables) {
 
   $variables['page'] = $variables['view_mode'] == 'full' && taxonomy_term_is_page($term);
 
-  // Helpful $content variable for templates.
+  // Helpful $content variable for 04-templates.
   $variables['content'] = [];
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];

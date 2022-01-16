@@ -10,7 +10,7 @@ use Drupal\Core\Field\FieldFilteredMarkup;
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for multi file form widget templates.
+ * Prepares variables for multi file form widget 04-templates.
  *
  * Default template: file-widget-multiple.html.twig.
  *
@@ -124,7 +124,7 @@ function template_preprocess_file_widget_multiple(&$variables) {
 }
 
 /**
- * Prepares variables for file upload help text templates.
+ * Prepares variables for file upload help text 04-templates.
  *
  * Default template: file-upload-help.html.twig.
  *

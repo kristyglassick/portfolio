@@ -19,7 +19,7 @@ use Twig\Source;
  * A class that defines a Twig environment for Drupal.
  *
  * Instances of this class are used to store the configuration and extensions,
- * and are used to load templates from the file system or other locations.
+ * and are used to load 04-templates from the file system or other locations.
  */
 class TwigEnvironment extends Environment {
 
@@ -133,7 +133,7 @@ class TwigEnvironment extends Environment {
   }
 
   /**
-   * Invalidates all compiled Twig templates.
+   * Invalidates all compiled Twig 04-templates.
    *
    * @see \drupal_flush_all_caches
    */
@@ -215,8 +215,8 @@ class TwigEnvironment extends Environment {
    * On top of that you have to ensure that the template string is not dynamic
    * but just an ordinary static php string, because there may be installations
    * using read-only PHPStorage that want to generate all possible twig
-   * templates as part of a build step. So it is important that an automated
-   * script can find the templates and extract them. This is only possible if
+   * 04-templates as part of a build step. So it is important that an automated
+   * script can find the 04-templates and extract them. This is only possible if
    * the template is a regular string.
    *
    * @param string $template_string
@@ -230,7 +230,7 @@ class TwigEnvironment extends Environment {
    * @see \Drupal\Core\Template\Loader\StringLoader::exists()
    */
   public function renderInline($template_string, array $context = []) {
-    // Prefix all inline templates with a special comment.
+    // Prefix all inline 04-templates with a special comment.
     $template_string = '{# inline_template_start #}' . $template_string;
     return Markup::create($this->createTemplate($template_string)->render($context));
   }

@@ -252,7 +252,7 @@ class LanguageNegotiationContentEntity extends LanguageNegotiationMethodBase imp
   }
 
   /**
-   * Returns the paths for the link templates of all content entities.
+   * Returns the paths for the link 04-templates of all content entities.
    *
    * @return array
    *   An array of all content entity type IDs, keyed by the corresponding link

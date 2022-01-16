@@ -120,7 +120,7 @@ class FrontMatterTest extends KernelTestBase {
       $this->assertEquals($line, $error->getTemplateLine());
     }
 
-    // Ensure string based templates work too.
+    // Ensure string based 04-templates work too.
     try {
       $this->twig->createTemplate($source)->render();
     }

@@ -224,7 +224,7 @@ function image_style_options($include_empty = TRUE) {
 }
 
 /**
- * Prepares variables for image style templates.
+ * Prepares variables for image style 04-templates.
  *
  * Default template: image-style.html.twig.
  *

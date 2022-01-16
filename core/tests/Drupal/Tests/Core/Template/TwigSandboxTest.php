@@ -76,7 +76,7 @@ class TwigSandboxTest extends UnitTestCase {
   }
 
   /**
-   * Tests that prefixed methods can be called from within Twig templates.
+   * Tests that prefixed methods can be called from within Twig 04-templates.
    *
    * Currently "get", "has", and "is" are the only allowed prefixes.
    */
@@ -105,7 +105,7 @@ class TwigSandboxTest extends UnitTestCase {
   }
 
   /**
-   * Tests that valid methods can be called from within Twig templates.
+   * Tests that valid methods can be called from within Twig 04-templates.
    *
    * Currently the following methods are whitelisted: id, label, bundle, and
    * get.

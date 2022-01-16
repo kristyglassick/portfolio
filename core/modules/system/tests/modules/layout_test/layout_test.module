@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements hook_preprocess_HOOK() for layout templates.
+ * Implements hook_preprocess_HOOK() for layout 04-templates.
  */
 function template_preprocess_layout_test_2col(&$variables) {
   $variables['region_attributes']['left']->addClass('class-added-by-preprocess');

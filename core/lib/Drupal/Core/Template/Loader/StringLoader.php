@@ -6,10 +6,10 @@ use Twig\Loader\LoaderInterface;
 use Twig\Source;
 
 /**
- * Loads string templates, also known as inline templates.
+ * Loads string 04-templates, also known as inline 04-templates.
  *
  * This loader is intended to be used in a Twig loader chain and only loads
- * string templates that begin with the following comment:
+ * string 04-templates that begin with the following comment:
  * @code
  * {# inline_template_start #}
  * @endcode

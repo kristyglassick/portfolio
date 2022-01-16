@@ -61,7 +61,7 @@ function theme_test_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for HTML document templates.
+ * Implements hook_preprocess_HOOK() for HTML document 04-templates.
  */
 function theme_test_preprocess_html(&$variables) {
   $variables['html_attributes']['theme_test_html_attribute'] = 'theme test html attribute value';
@@ -99,7 +99,7 @@ function theme_test_preprocess_theme_test_preprocess_suggestions__monkey(&$varia
 }
 
 /**
- * Prepares variables for test render element templates.
+ * Prepares variables for test render element 04-templates.
  *
  * Default template: theme-test-render-element.html.twig.
  *

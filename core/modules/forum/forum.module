@@ -348,7 +348,7 @@ function forum_form_node_form_alter(&$form, FormStateInterface $form_state, $for
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block templates.
+ * Implements hook_preprocess_HOOK() for block 04-templates.
  */
 function forum_preprocess_block(&$variables) {
   if ($variables['configuration']['provider'] == 'forum') {
@@ -384,7 +384,7 @@ function forum_theme_suggestions_forums(array $variables) {
 }
 
 /**
- * Prepares variables for forums templates.
+ * Prepares variables for forums 04-templates.
  *
  * Default template: forums.html.twig.
  *
@@ -531,7 +531,7 @@ function template_preprocess_forums(&$variables) {
 }
 
 /**
- * Prepares variables for forum list templates.
+ * Prepares variables for forum list 04-templates.
  *
  * Default template: forum-list.html.twig.
  *
@@ -585,7 +585,7 @@ function template_preprocess_forum_list(&$variables) {
 }
 
 /**
- * Prepares variables for forum icon templates.
+ * Prepares variables for forum icon 04-templates.
  *
  * Default template: forum-icon.html.twig.
  *
@@ -624,7 +624,7 @@ function template_preprocess_forum_icon(&$variables) {
 }
 
 /**
- * Prepares variables for forum submission information templates.
+ * Prepares variables for forum submission information 04-templates.
  *
  * The submission information will be displayed in the forum list and topic
  * list.

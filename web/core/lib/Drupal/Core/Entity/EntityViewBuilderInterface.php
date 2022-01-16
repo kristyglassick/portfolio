@@ -88,7 +88,7 @@ interface EntityViewBuilderInterface {
    *
    * This function can be used by third-party modules that need to output an
    * isolated field.
-   * - Do not use inside node (or any other entity) templates; use
+   * - Do not use inside node (or any other entity) 04-templates; use
    *   render($content[FIELD_NAME]) instead.
    * - The FieldItemInterface::view() method can be used to output a single
    *   formatted field value, without label or wrapping field markup.

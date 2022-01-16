@@ -16547,7 +16547,7 @@ $connection->insert('locales_source')
   'lid' => '765',
   'location' => '/?q=fr/admin/user/settings',
   'textgroup' => 'default',
-  'source' => 'Drupal sends emails whenever new users register on your site, and optionally, may also notify users after other account actions. Using a simple set of content templates, notification e-mails can be customized to fit the specific needs of your site.',
+  'source' => 'Drupal sends emails whenever new users register on your site, and optionally, may also notify users after other account actions. Using a simple set of content 04-templates, notification e-mails can be customized to fit the specific needs of your site.',
   'version' => '6.38-dev',
 ))
 ->values(array(

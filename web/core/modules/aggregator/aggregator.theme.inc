@@ -9,7 +9,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for aggregator item templates.
+ * Prepares variables for aggregator item 04-templates.
  *
  * Default template: aggregator-item.html.twig.
  *
@@ -28,7 +28,7 @@ use Drupal\Core\Render\Element;
 function template_preprocess_aggregator_item(&$variables) {
   $item = $variables['elements']['#aggregator_item'];
 
-  // Helpful $content variable for templates.
+  // Helpful $content variable for 04-templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
@@ -47,7 +47,7 @@ function template_preprocess_aggregator_item(&$variables) {
 }
 
 /**
- * Prepares variables for aggregator feed templates.
+ * Prepares variables for aggregator feed 04-templates.
  *
  * Default template: aggregator-feed.html.twig.
  *
@@ -66,7 +66,7 @@ function template_preprocess_aggregator_item(&$variables) {
 function template_preprocess_aggregator_feed(&$variables) {
   $feed = $variables['elements']['#aggregator_feed'];
 
-  // Helpful $content variable for templates.
+  // Helpful $content variable for 04-templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }

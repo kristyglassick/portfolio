@@ -48,10 +48,10 @@ class TwigNamespaceTest extends KernelTestBase {
    * Tests template discovery using namespaces.
    */
   public function testTemplateDiscovery() {
-    // Tests resolving namespaced templates in modules.
+    // Tests resolving namespaced 04-templates in modules.
     $this->assertTwigTemplate($this->twig->load('@node/node.html.twig'), 'Found node.html.twig in node module.');
 
-    // Tests resolving namespaced templates in themes.
+    // Tests resolving namespaced 04-templates in themes.
     $this->assertTwigTemplate($this->twig->load('@bartik/page.html.twig'), 'Found page.html.twig in Bartik theme.');
   }
 
@@ -63,8 +63,8 @@ class TwigNamespaceTest extends KernelTestBase {
     $test = ['#theme' => 'twig_namespace_test'];
     $this->setRawContent(\Drupal::service('renderer')->renderRoot($test));
 
-    $this->assertText('This line is from twig_namespace_a/templates/test.html.twig');
-    $this->assertText('This line is from twig_namespace_b/templates/test.html.twig');
+    $this->assertText('This line is from twig_namespace_a/04-templates/test.html.twig');
+    $this->assertText('This line is from twig_namespace_b/04-templates/test.html.twig');
   }
 
 }

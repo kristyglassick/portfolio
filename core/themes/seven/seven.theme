@@ -13,7 +13,7 @@ use Drupal\views\Form\ViewsForm;
 use Drupal\views\ViewExecutable;
 
 /**
- * Implements hook_preprocess_HOOK() for HTML document templates.
+ * Implements hook_preprocess_HOOK() for HTML document 04-templates.
  */
 function seven_preprocess_html(&$variables) {
   // If on a node add or edit page, add a node-layout class.
@@ -28,7 +28,7 @@ function seven_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for menu-local-tasks templates.
+ * Implements hook_preprocess_HOOK() for menu-local-tasks 04-templates.
  *
  * Use preprocess hook to set #attached to child elements because they will be
  * processed by Twig and \Drupal::service('renderer')->render() will be invoked.
@@ -51,14 +51,14 @@ function seven_preprocess_menu_local_tasks(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ * Implements hook_preprocess_HOOK() for menu-local-task 04-templates.
  */
 function seven_preprocess_menu_local_task(&$variables) {
   $variables['attributes']['class'][] = 'tabs__tab';
 }
 
 /**
- * Implements hook_preprocess_HOOK() for list of available node type templates.
+ * Implements hook_preprocess_HOOK() for list of available node type 04-templates.
  */
 function seven_preprocess_node_add_list(&$variables) {
   if (!empty($variables['content'])) {
@@ -71,7 +71,7 @@ function seven_preprocess_node_add_list(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block content add list templates.
+ * Implements hook_preprocess_HOOK() for block content add list 04-templates.
  *
  * Displays the list of available custom block types for creation, adding
  * separate variables for the label and url.
@@ -101,7 +101,7 @@ function seven_preprocess_block(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block admin page templates.
+ * Implements hook_preprocess_HOOK() for block admin page 04-templates.
  */
 function seven_preprocess_admin_block_content(&$variables) {
   if (!empty($variables['content'])) {
@@ -112,7 +112,7 @@ function seven_preprocess_admin_block_content(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for menu-local-action templates.
+ * Implements hook_preprocess_HOOK() for menu-local-action 04-templates.
  */
 function seven_preprocess_menu_local_action(array &$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'button--primary';
@@ -417,7 +417,7 @@ function seven_preprocess_links__media_library_menu(array &$variables) {
 function seven_preprocess_image_widget(array &$variables) {
   $data = &$variables['data'];
 
-  // This prevents image widget templates from rendering preview container HTML
+  // This prevents image widget 04-templates from rendering preview container HTML
   // to users that do not have permission to access these previews.
   // @todo revisit in https://drupal.org/node/953034
   // @todo revisit in https://drupal.org/node/3114318
@@ -434,7 +434,7 @@ function seven_preprocess_image_widget(array &$variables) {
 }
 
 /**
- * Prepares variables for update version templates.
+ * Prepares variables for update version 04-templates.
  *
  * Default template: update-version.html.twig.
  *

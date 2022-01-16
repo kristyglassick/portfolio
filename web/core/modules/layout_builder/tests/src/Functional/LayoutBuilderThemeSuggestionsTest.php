@@ -67,7 +67,7 @@ class LayoutBuilderThemeSuggestionsTest extends BrowserTestBase {
   }
 
   /**
-   * Tests that of view mode specific field templates are suggested.
+   * Tests that of view mode specific field 04-templates are suggested.
    */
   public function testFieldBlockViewModeTemplates() {
     $assert_session = $this->assertSession();

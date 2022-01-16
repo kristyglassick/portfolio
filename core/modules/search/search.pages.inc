@@ -9,7 +9,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Language\LanguageInterface;
 
 /**
- * Prepares variables for individual search result templates.
+ * Prepares variables for individual search result 04-templates.
  *
  * Default template: search-result.html.twig
  *

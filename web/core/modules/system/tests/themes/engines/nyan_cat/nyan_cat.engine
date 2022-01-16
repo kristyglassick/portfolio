@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Handles integration of Nyan cat templates because we love kittens.
+ * Handles integration of Nyan cat 04-templates because we love kittens.
  */
 
 use Drupal\Core\Extension\Extension;

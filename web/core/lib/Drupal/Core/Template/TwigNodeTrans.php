@@ -139,7 +139,7 @@ class TwigNodeTrans extends Node {
           // Detect if a token implements one of the filters reserved for
           // modifying the prefix of a token. The default prefix used for
           // translations is "@". This escapes the printed token and makes them
-          // safe for templates.
+          // safe for 04-templates.
           // @see TwigExtension::getFilters()
           $argPrefix = '@';
           while ($args instanceof FilterExpression) {

@@ -101,7 +101,7 @@ interface EntityInterface extends AccessibleInterface, CacheableDependencyInterf
    * The entity must have an id already. Content entities usually get their IDs
    * by saving them.
    *
-   * URI templates might be set in the links array in an annotation, for
+   * URI 04-templates might be set in the links array in an annotation, for
    * example:
    * @code
    * links = {

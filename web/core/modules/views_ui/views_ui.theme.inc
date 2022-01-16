@@ -14,7 +14,7 @@ use Drupal\Core\Url;
 use Drupal\Core\Template\Attribute;
 
 /**
- * Prepares variables for Views UI display tab setting templates.
+ * Prepares variables for Views UI display tab setting 04-templates.
  *
  * Default template: views-ui-display-tab-setting.html.twig.
  *
@@ -44,7 +44,7 @@ function template_preprocess_views_ui_display_tab_setting(&$variables) {
 }
 
 /**
- * Prepares variables for Views UI view listing templates.
+ * Prepares variables for Views UI view listing 04-templates.
  *
  * Default template: views-ui-view-listing-table.html.twig.
  *
@@ -69,7 +69,7 @@ function template_preprocess_views_ui_views_listing_table(&$variables) {
 }
 
 /**
- * Prepares variables for Views UI display tab bucket templates.
+ * Prepares variables for Views UI display tab bucket 04-templates.
  *
  * Default template: views-ui-display-tab-bucket.html.twig.
  *
@@ -93,7 +93,7 @@ function template_preprocess_views_ui_display_tab_bucket(&$variables) {
 }
 
 /**
- * Prepares variables for Views UI build group filter form templates.
+ * Prepares variables for Views UI build group filter form 04-templates.
  *
  * Default template: views-ui-build-group-filter-form.html.twig.
  *
@@ -193,7 +193,7 @@ function template_preprocess_views_ui_build_group_filter_form(&$variables) {
 }
 
 /**
- * Prepares variables for Views UI rearrange filter form templates.
+ * Prepares variables for Views UI rearrange filter form 04-templates.
  *
  * Default template: views-ui-rearrange-filter-form.html.twig.
  *
@@ -386,7 +386,7 @@ function template_preprocess_views_ui_rearrange_filter_form(&$variables) {
 }
 
 /**
- * Prepares variables for style plugin table templates.
+ * Prepares variables for style plugin table 04-templates.
  *
  * Default template: views-ui-style-plugin-table.html.twig.
  *
@@ -480,7 +480,7 @@ function template_preprocess_views_ui_style_plugin_table(&$variables) {
 }
 
 /**
- * Prepares variables for views UI view preview section templates.
+ * Prepares variables for views UI view preview section 04-templates.
  *
  * Default template: views-ui-view-preview-section.html.twig.
  *

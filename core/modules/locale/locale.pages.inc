@@ -9,7 +9,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
- * Prepares variables for translation status information templates.
+ * Prepares variables for translation status information 04-templates.
  *
  * Translation status information is displayed per language.
  *
@@ -29,7 +29,7 @@ function template_preprocess_locale_translation_update_info(array &$variables) {
 }
 
 /**
- * Prepares variables for most recent translation update templates.
+ * Prepares variables for most recent translation update 04-templates.
  *
  * Displays the last time we checked for locale update data. In addition to
  * properly formatting the given timestamp, this function also provides a "Check

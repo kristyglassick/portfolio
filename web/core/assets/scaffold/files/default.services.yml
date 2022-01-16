@@ -62,12 +62,12 @@ parameters:
     # - Note that this debugging markup will cause automated tests that directly
     #   check rendered HTML to fail. When running automated tests, 'debug'
     #   should be set to FALSE.
-    # - The dump() function can be used in Twig templates to output information
+    # - The dump() function can be used in Twig 04-templates to output information
     #   about template variables.
-    # - Twig templates are automatically recompiled whenever the source code
+    # - Twig 04-templates are automatically recompiled whenever the source code
     #   changes (see auto_reload below).
     #
-    # For more information about debugging Twig templates, see
+    # For more information about debugging Twig 04-templates, see
     # https://www.drupal.org/node/1906392.
     #
     # Not recommended in production environments
@@ -75,7 +75,7 @@ parameters:
     debug: false
     # Twig auto-reload:
     #
-    # Automatically recompile Twig templates whenever the source code changes.
+    # Automatically recompile Twig 04-templates whenever the source code changes.
     # If you don't provide a value for auto_reload, it will be determined
     # based on the value of debug.
     #
@@ -84,9 +84,9 @@ parameters:
     auto_reload: null
     # Twig cache:
     #
-    # By default, Twig templates will be compiled and stored in the filesystem
+    # By default, Twig 04-templates will be compiled and stored in the filesystem
     # to increase performance. Disabling the Twig cache will recompile the
-    # templates from source each time they are used. In most cases the
+    # 04-templates from source each time they are used. In most cases the
     # auto_reload setting above should be enabled rather than disabling the
     # Twig cache.
     #

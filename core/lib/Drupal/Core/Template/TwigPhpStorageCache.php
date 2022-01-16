@@ -13,7 +13,7 @@ use Twig\Cache\CacheInterface;
  * This class is designed to work on setups with multiple webheads using a local
  * filesystem for the twig cache. When generating the cache key, a hash value
  * depending on the enabled extensions is included. This prevents stale
- * templates from being reused when twig extensions are enabled or disabled.
+ * 04-templates from being reused when twig extensions are enabled or disabled.
  *
  * @see \Drupal\Core\DependencyInjection\Compiler\TwigExtensionPass
  */
@@ -32,7 +32,7 @@ class TwigPhpStorageCache implements CacheInterface {
   protected $cache;
 
   /**
-   * The PhpStorage object used for storing the templates.
+   * The PhpStorage object used for storing the 04-templates.
    *
    * @var \Drupal\Component\PhpStorage\PhpStorageInterface
    */

@@ -222,7 +222,7 @@ class DisplayPageTest extends ViewsKernelTestBase {
   }
 
   /**
-   * Tests the templates with empty rows.
+   * Tests the 04-templates with empty rows.
    */
   public function testEmptyRow() {
     $view = Views::getView('test_page_display');

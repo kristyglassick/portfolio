@@ -94,7 +94,7 @@ function template_preprocess_language_negotiation_configure_form(&$variables) {
 }
 
 /**
- * Prepares variables for language content settings table templates.
+ * Prepares variables for language content settings table 04-templates.
  *
  * Default template: language-content-settings-table.html.twig.
  *

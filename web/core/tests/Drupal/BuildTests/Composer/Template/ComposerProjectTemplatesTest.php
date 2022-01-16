@@ -8,7 +8,7 @@ use Drupal\BuildTests\Framework\BuildTestBase;
 use Drupal\Composer\Composer;
 
 /**
- * Demonstrate that Composer project templates are buildable as patched.
+ * Demonstrate that Composer project 04-templates are buildable as patched.
  *
  * We have to use the packages.json fixture so that Composer will use the
  * in-codebase version of the project template.
@@ -102,18 +102,18 @@ class ComposerProjectTemplatesTest extends BuildTestBase {
   }
 
   /**
-   * Make sure we've accounted for all the templates.
+   * Make sure we've accounted for all the 04-templates.
    */
   public function testVerifyTemplateTestProviderIsAccurate() {
     $root = $this->getDrupalRoot();
     $data = $this->provideTemplateCreateProject($root);
 
-    // Find all the templates.
+    // Find all the 04-templates.
     $template_files = Composer::composerSubprojectPaths($root, 'Template');
 
     $this->assertSameSize($template_files, $data);
 
-    // We could have the same number of templates but different names.
+    // We could have the same number of 04-templates but different names.
     $template_data = [];
     foreach ($data as $data_name => $data_value) {
       $template_data[$data_value[0]] = $data_name;
@@ -273,7 +273,7 @@ class ComposerProjectTemplatesTest extends BuildTestBase {
   }
 
   /**
-   * Creates a test package that points to the templates.
+   * Creates a test package that points to the 04-templates.
    *
    * @param string $repository_path
    *   The path where to create the test package.

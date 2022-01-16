@@ -15,7 +15,7 @@ use Drupal\Component\Serialization\SerializationInterface;
  *
  * Front matter is used as a way to provide additional static data associated
  * with a source without affecting the contents of the source. Typically this
- * is used in templates to denote special handling or categorization.
+ * is used in 04-templates to denote special handling or categorization.
  *
  * Front matter must be the first thing in the source and must take the form of
  * valid YAML set in between triple-hyphen lines:

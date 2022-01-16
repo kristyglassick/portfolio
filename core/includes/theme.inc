@@ -183,12 +183,12 @@ function drupal_find_theme_functions($cache, $prefixes) {
 }
 
 /**
- * Allows themes and/or theme engines to easily discover overridden templates.
+ * Allows themes and/or theme engines to easily discover overridden 04-templates.
  *
  * @param $cache
  *   The existing cache of theme hooks to test against.
  * @param $extension
- *   The extension that these templates will have.
+ *   The extension that these 04-templates will have.
  * @param $path
  *   The path to search.
  */
@@ -222,11 +222,11 @@ function drupal_find_theme_templates($cache, $extension, $path) {
     $files = \Drupal::service('file_system')->scanDirectory($path, $regex, ['key' => 'filename']);
   }
 
-  // Find templates that implement registered theme hooks and include that in
+  // Find 04-templates that implement registered theme hooks and include that in
   // what is returned so that the registry knows that the theme has this
   // implementation.
   foreach ($files as $template => $file) {
-    // Ignore sub-theme templates for the current theme.
+    // Ignore sub-theme 04-templates for the current theme.
     if (strpos($file->uri, str_replace($subtheme_paths, '', $file->uri)) !== 0) {
       continue;
     }
@@ -242,7 +242,7 @@ function drupal_find_theme_templates($cache, $extension, $path) {
       ];
     }
 
-    // Match templates based on the 'template' filename.
+    // Match 04-templates based on the 'template' filename.
     foreach ($cache as $hook => $info) {
       if (isset($info['template'])) {
         if ($template === $info['template']) {
@@ -255,7 +255,7 @@ function drupal_find_theme_templates($cache, $extension, $path) {
     }
   }
 
-  // Find templates that implement possible "suggestion" variants of registered
+  // Find 04-templates that implement possible "suggestion" variants of registered
   // theme hooks and add those as new registered theme hooks. See
   // drupal_find_theme_functions() for more information about suggestions and
   // the use of 'pattern' and 'base hook'.
@@ -504,7 +504,7 @@ function theme_settings_convert_to_config(array $theme_settings, Config $config)
 }
 
 /**
- * Prepares variables for time templates.
+ * Prepares variables for time 04-templates.
  *
  * Default template: time.html.twig.
  *
@@ -537,7 +537,7 @@ function template_preprocess_time(&$variables) {
 }
 
 /**
- * Prepares variables for datetime form element templates.
+ * Prepares variables for datetime form element 04-templates.
  *
  * The datetime form element serves as a wrapper around the date element type,
  * which creates a date and a time component for a date.
@@ -589,7 +589,7 @@ function template_preprocess_datetime_form(&$variables) {
 }
 
 /**
- * Prepares variables for datetime form wrapper templates.
+ * Prepares variables for datetime form wrapper 04-templates.
  *
  * Default template: datetime-wrapper.html.twig.
  *
@@ -634,11 +634,11 @@ function template_preprocess_datetime_wrapper(&$variables) {
 }
 
 /**
- * Prepares variables for links templates.
+ * Prepares variables for links 04-templates.
  *
  * Default template: links.html.twig.
  *
- * Unfortunately links templates duplicate the "active" class handling of l()
+ * Unfortunately links 04-templates duplicate the "active" class handling of l()
  * and LinkGenerator::generate() because it needs to be able to set the "active"
  * class not on the links themselves (<a> tags), but on the list items (<li>
  * tags) that contain the links. This is necessary for CSS to be able to style
@@ -730,7 +730,7 @@ function template_preprocess_links(&$variables) {
       ];
 
       // Handle links and ensure that the active class is added on the LIs, but
-      // only if the 'set_active_class' option is not empty. Links templates
+      // only if the 'set_active_class' option is not empty. Links 04-templates
       // duplicate the "is-active" class handling of l() and
       // LinkGenerator::generate() because they need to be able to set the
       // "is-active" class not on the links themselves (<a> tags), but on the
@@ -794,7 +794,7 @@ function template_preprocess_links(&$variables) {
 }
 
 /**
- * Prepares variables for image templates.
+ * Prepares variables for image 04-templates.
  *
  * Default template: image.html.twig.
  *
@@ -810,7 +810,7 @@ function template_preprocess_links(&$variables) {
  *     to an empty string, but can be set to NULL for the attribute to be
  *     omitted. Usually, neither omission nor an empty string satisfies
  *     accessibility requirements, so it is strongly encouraged for code
- *     building variables for image.html.twig templates to pass a meaningful
+ *     building variables for image.html.twig 04-templates to pass a meaningful
  *     value for this variable.
  *     - http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.8
  *     - http://www.w3.org/TR/xhtml1/dtds.html
@@ -867,7 +867,7 @@ function template_preprocess_image(&$variables) {
 }
 
 /**
- * Prepares variables for table templates.
+ * Prepares variables for table 04-templates.
  *
  * Default template: table.html.twig.
  *
@@ -1121,7 +1121,7 @@ function template_preprocess_table(&$variables) {
 }
 
 /**
- * Prepares variables for item list templates.
+ * Prepares variables for item list 04-templates.
  *
  * Default template: item-list.html.twig.
  *
@@ -1189,7 +1189,7 @@ function template_preprocess_item_list(&$variables) {
 }
 
 /**
- * Prepares variables for container templates.
+ * Prepares variables for container 04-templates.
  *
  * Default template: container.html.twig.
  *
@@ -1218,7 +1218,7 @@ function template_preprocess_container(&$variables) {
 }
 
 /**
- * Prepares variables for maintenance task list templates.
+ * Prepares variables for maintenance task list 04-templates.
  *
  * Default template: maintenance-task-list.html.twig.
  *
@@ -1252,7 +1252,7 @@ function template_preprocess_maintenance_task_list(&$variables) {
 }
 
 /**
- * Adds a default set of helper variables for preprocessors and templates.
+ * Adds a default set of helper variables for preprocessors and 04-templates.
  *
  * This function is called for every theme hook. It is the first in the
  * sequence of preprocessing functions called when preparing variables for a
@@ -1304,14 +1304,14 @@ function _template_preprocess_default_variables() {
   // Give modules a chance to alter the default template variables.
   \Drupal::moduleHandler()->alter('template_preprocess_default_variables', $variables);
 
-  // Tell all templates where they are located.
+  // Tell all 04-templates where they are located.
   $variables['directory'] = \Drupal::theme()->getActiveTheme()->getPath();
 
   return $variables;
 }
 
 /**
- * Prepares variables for HTML document templates.
+ * Prepares variables for HTML document 04-templates.
  *
  * Default template: html.html.twig.
  *
@@ -1480,15 +1480,15 @@ function theme_get_suggestions($args, $base, $delimiter = '__') {
     // Remove slashes or null per SA-CORE-2009-003 and change - (hyphen) to _
     // (underscore).
     //
-    // When we discover templates in @see drupal_find_theme_templates,
+    // When we discover 04-templates in @see drupal_find_theme_templates,
     // hyphens (-) are converted to underscores (_) before the theme hook
     // is registered. We do this because the hyphens used for delimiters
     // in hook suggestions cannot be used in the function names of the
-    // associated preprocess functions. Any page templates designed to be used
+    // associated preprocess functions. Any page 04-templates designed to be used
     // on paths that contain a hyphen are also registered with these hyphens
     // converted to underscores so here we must convert any hyphens in path
     // arguments to underscores here before fetching theme hook suggestions
-    // to ensure the templates are appropriately recognized.
+    // to ensure the 04-templates are appropriately recognized.
     $arg = str_replace(["/", "\\", "\0", '-'], ['', '', '', '_'], $arg);
     // The percent acts as a wildcard for numeric arguments since
     // asterisks are not valid filename characters on many filesystems.
@@ -1501,7 +1501,7 @@ function theme_get_suggestions($args, $base, $delimiter = '__') {
     }
   }
   if (\Drupal::service('path.matcher')->isFrontPage()) {
-    // Front templates should be based on root only, not prefixed arguments.
+    // Front 04-templates should be based on root only, not prefixed arguments.
     $suggestions[] = $base . $delimiter . 'front';
   }
 
@@ -1509,7 +1509,7 @@ function theme_get_suggestions($args, $base, $delimiter = '__') {
 }
 
 /**
- * Prepares variables for maintenance page templates.
+ * Prepares variables for maintenance page 04-templates.
  *
  * Default template: maintenance-page.html.twig.
  *
@@ -1520,7 +1520,7 @@ function theme_get_suggestions($args, $base, $delimiter = '__') {
  * @see system_page_attachments()
  */
 function template_preprocess_maintenance_page(&$variables) {
-  // @todo Rename the templates to page--maintenance + page--install.
+  // @todo Rename the 04-templates to page--maintenance + page--install.
   template_preprocess_page($variables);
 
   // @see system_page_attachments()
@@ -1539,7 +1539,7 @@ function template_preprocess_maintenance_page(&$variables) {
 }
 
 /**
- * Prepares variables for install page templates.
+ * Prepares variables for install page 04-templates.
  *
  * Default template: install-page.html.twig.
  *
@@ -1560,7 +1560,7 @@ function template_preprocess_install_page(&$variables) {
 }
 
 /**
- * Prepares variables for region templates.
+ * Prepares variables for region 04-templates.
  *
  * Default template: region.html.twig.
  *
@@ -1573,13 +1573,13 @@ function template_preprocess_install_page(&$variables) {
  *   - elements: An associative array containing properties of the region.
  */
 function template_preprocess_region(&$variables) {
-  // Create the $content variable that templates expect.
+  // Create the $content variable that 04-templates expect.
   $variables['content'] = $variables['elements']['#children'];
   $variables['region'] = $variables['elements']['#region'];
 }
 
 /**
- * Prepares variables for field templates.
+ * Prepares variables for field 04-templates.
  *
  * Default template: field.html.twig.
  *
@@ -1640,7 +1640,7 @@ function template_preprocess_field(&$variables, $hook) {
 }
 
 /**
- * Prepares variables for individual form element templates.
+ * Prepares variables for individual form element 04-templates.
  *
  * Default template: field-multiple-value-form.html.twig.
  *
@@ -1747,7 +1747,7 @@ function template_preprocess_field_multiple_value_form(&$variables) {
 }
 
 /**
- * Prepares variables for breadcrumb templates.
+ * Prepares variables for breadcrumb 04-templates.
  *
  * Default template: breadcrumb.html.twig.
  *
@@ -1764,7 +1764,7 @@ function template_preprocess_breadcrumb(&$variables) {
 }
 
 /**
- * Prepares variables for pager templates.
+ * Prepares variables for pager 04-templates.
  *
  * Default template: pager.html.twig.
  *
@@ -1913,7 +1913,7 @@ function template_preprocess_pager(&$variables) {
 }
 
 /**
- * Prepares variables for single local task link templates.
+ * Prepares variables for single local task link 04-templates.
  *
  * Default template: menu-local-task.html.twig.
  *
@@ -1950,7 +1950,7 @@ function template_preprocess_menu_local_task(&$variables) {
 }
 
 /**
- * Prepares variables for single local action link templates.
+ * Prepares variables for single local action link 04-templates.
  *
  * Default template: menu-local-action.html.twig.
  *
@@ -2028,10 +2028,10 @@ function drupal_common_theme() {
       // HTML 4 and XHTML 1.0 always require an alt attribute. The HTML 5 draft
       // allows the alt attribute to be omitted in some cases. Therefore,
       // default the alt attribute to an empty string, but allow code providing
-      // variables to image.html.twig templates to pass explicit NULL for it to
+      // variables to image.html.twig 04-templates to pass explicit NULL for it to
       // be omitted. Usually, neither omission nor an empty string satisfies
       // accessibility requirements, so it is strongly encouraged for code
-      // building variables for image.html.twig templates to pass a meaningful
+      // building variables for image.html.twig 04-templates to pass a meaningful
       // value for the alt variable.
       // - http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.8
       // - http://www.w3.org/TR/xhtml1/dtds.html

@@ -174,7 +174,7 @@ interface ViewsPluginInterface extends PluginInspectionInterface, DerivativeInsp
   public function buildOptionsForm(&$form, FormStateInterface $form_state);
 
   /**
-   * Provide a full list of possible theme templates used by this style.
+   * Provide a full list of possible theme 04-templates used by this style.
    */
   public function themeFunctions();
 

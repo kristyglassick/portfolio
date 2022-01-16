@@ -161,7 +161,7 @@ abstract class EntityBase implements EntityInterface {
       throw new EntityMalformedException(sprintf('The "%s" entity cannot have a URI as it does not have an ID', $this->getEntityTypeId()));
     }
 
-    // The links array might contain URI templates set in annotations.
+    // The links array might contain URI 04-templates set in annotations.
     $link_templates = $this->linkTemplates();
 
     // Links pointing to the current revision point to the actual entity. So
@@ -225,10 +225,10 @@ abstract class EntityBase implements EntityInterface {
   }
 
   /**
-   * Gets an array link templates.
+   * Gets an array link 04-templates.
    *
    * @return array
-   *   An array of link templates containing paths.
+   *   An array of link 04-templates containing paths.
    */
   protected function linkTemplates() {
     return $this->getEntityType()->getLinkTemplates();

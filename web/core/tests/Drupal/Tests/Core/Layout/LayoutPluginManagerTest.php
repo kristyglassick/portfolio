@@ -122,10 +122,10 @@ class LayoutPluginManagerTest extends UnitTestCase {
     $this->assertInstanceOf(TranslatableMarkup::class, $layout_definition->getCategory());
     $this->assertInstanceOf(TranslatableMarkup::class, $layout_definition->getDescription());
     $this->assertSame('twocol', $layout_definition->getTemplate());
-    $this->assertSame('themes/theme_a/templates', $layout_definition->getPath());
+    $this->assertSame('themes/theme_a/04-templates', $layout_definition->getPath());
     $this->assertSame('theme_a/twocol', $layout_definition->getLibrary());
     $this->assertSame('twocol', $layout_definition->getThemeHook());
-    $this->assertSame('themes/theme_a/templates', $layout_definition->getTemplatePath());
+    $this->assertSame('themes/theme_a/04-templates', $layout_definition->getTemplatePath());
     $this->assertSame('theme_a', $layout_definition->getProvider());
     $this->assertSame('right', $layout_definition->getDefaultRegion());
     $this->assertSame(LayoutDefault::class, $layout_definition->getClass());
@@ -184,7 +184,7 @@ class LayoutPluginManagerTest extends UnitTestCase {
     $this->assertSame($core_path, $layout_definition->getPath());
     $this->assertSame(NULL, $layout_definition->getLibrary());
     $this->assertSame('plugin_provided_layout', $layout_definition->getThemeHook());
-    $this->assertSame("$core_path/templates", $layout_definition->getTemplatePath());
+    $this->assertSame("$core_path/04-templates", $layout_definition->getTemplatePath());
     $this->assertSame('core', $layout_definition->getProvider());
     $this->assertSame('main', $layout_definition->getDefaultRegion());
     $this->assertSame('Drupal\Core\Plugin\Layout\TestLayout', $layout_definition->getClass());
@@ -233,13 +233,13 @@ EOS;
         'render element' => 'content',
         'base hook' => 'layout',
         'template' => 'twocol',
-        'path' => 'themes/theme_a/templates',
+        'path' => 'themes/theme_a/04-templates',
       ],
       'plugin_provided_layout' => [
         'render element' => 'content',
         'base hook' => 'layout',
         'template' => 'plugin-provided-layout',
-        'path' => "$core_path/templates",
+        'path' => "$core_path/04-templates",
       ],
     ];
     $theme_implementations = $this->layoutPluginManager->getThemeImplementations();
@@ -324,7 +324,7 @@ theme_a_provided_layout:
   category: 'Columns: 2'
   description: 'A theme provided layout'
   template: twocol
-  path: templates
+  path: 04-templates
   library: theme_a/twocol
   default_region: right
   regions:
@@ -344,7 +344,7 @@ use Drupal\Core\Layout\LayoutDefault;
  *   category = @Translation("Columns: 1"),
  *   description = @Translation("Test layout"),
  *   path = "core/lib/Drupal/Core",
- *   template = "templates/plugin-provided-layout",
+ *   template = "04-templates/plugin-provided-layout",
  *   regions = {
  *     "main" = {
  *       "label" = @Translation("Main Region", context = "layout_region")

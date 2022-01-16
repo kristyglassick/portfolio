@@ -151,7 +151,7 @@ function views_theme($existing, $type, $theme, $path) {
   // Register theme functions for all style plugins. It provides a basic auto
   // implementation of theme functions or template files by using the plugin
   // definitions (theme, theme_file, module, register_theme). Template files are
-  // assumed to be located in the templates folder.
+  // assumed to be located in the 04-templates folder.
   foreach ($plugins as $type => $info) {
     foreach ($info as $def) {
       // Not all plugins have theme functions, and they can also explicitly
@@ -160,7 +160,7 @@ function views_theme($existing, $type, $theme, $path) {
         continue;
       }
       // For each theme registration, we have a base directory to check for the
-      // templates folder. This will be relative to the root of the given module
+      // 04-templates folder. This will be relative to the root of the given module
       // folder, so we always need a module definition.
       // @todo: watchdog or exception?
       if (!isset($def['provider']) || !$module_handler->moduleExists($def['provider'])) {
@@ -199,12 +199,12 @@ function views_theme($existing, $type, $theme, $path) {
       }
 
       // If there is no theme function for the given theme definition, it must
-      // be a template file. By default this file is located in the /templates
+      // be a template file. By default this file is located in the /04-templates
       // directory of the module's folder. If a module wants to define its own
       // location it has to set register_theme of the plugin to FALSE and
       // implement hook_theme() by itself.
       if (!function_exists('theme_' . $def['theme'])) {
-        $hooks[$def['theme']]['path'] .= '/templates';
+        $hooks[$def['theme']]['path'] .= '/04-templates';
         $hooks[$def['theme']]['template'] = Html::cleanCssIdentifier($def['theme']);
       }
       else {
@@ -226,7 +226,7 @@ function views_theme($existing, $type, $theme, $path) {
 
 /**
  * A theme preprocess function to automatically allow view-based node
- * templates if called from a view.
+ * 04-templates if called from a view.
  *
  * The 'modules/node.views.inc' file is a better place for this, but
  * we haven't got a chance to load that file before Drupal builds the
@@ -263,7 +263,7 @@ function views_theme_suggestions_node_alter(array &$suggestions, array $variable
 
 /**
  * A theme preprocess function to automatically allow view-based node
- * templates if called from a view.
+ * 04-templates if called from a view.
  */
 function views_preprocess_comment(&$variables) {
   // The view data is added to the comment in

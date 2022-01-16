@@ -77,7 +77,7 @@ class StableTemplateOverrideTest extends KernelTestBase {
   }
 
   /**
-   * Ensures that Stable overrides all relevant core templates.
+   * Ensures that Stable overrides all relevant core 04-templates.
    */
   public function testStableTemplateOverrides() {
     $registry = new Registry($this->root, \Drupal::cache(), \Drupal::lock(), \Drupal::moduleHandler(), $this->themeHandler, \Drupal::service('theme.initialization'), 'stable', NULL, \Drupal::service('extension.list.module'));
@@ -87,7 +87,7 @@ class StableTemplateOverrideTest extends KernelTestBase {
 
     foreach ($registry_full as $hook => $info) {
       if (isset($info['template'])) {
-        // Allow skipping templates.
+        // Allow skipping 04-templates.
         if (in_array($info['template'], $this->templatesToSkip)) {
           continue;
         }

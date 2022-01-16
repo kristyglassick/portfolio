@@ -36,7 +36,7 @@ function rdf_help($route_name, RouteMatchInterface $route_match) {
  *
  * Modules can provide mappings of their bundles' data and metadata to RDF
  * classes and properties. This module takes care of injecting these mappings
- * into variables available to theme functions and templates. All Drupal core
+ * into variables available to theme functions and 04-templates. All Drupal core
  * themes are coded to be RDFa compatible.
  */
 
@@ -263,7 +263,7 @@ function rdf_theme() {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for HTML document templates.
+ * Implements hook_preprocess_HOOK() for HTML document 04-templates.
  */
 function rdf_preprocess_html(&$variables) {
   // Adds RDF namespace prefix bindings in the form of an RDFa 1.1 prefix
@@ -277,7 +277,7 @@ function rdf_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for UID field templates.
+ * Implements hook_preprocess_HOOK() for UID field 04-templates.
  */
 function rdf_preprocess_field__node__uid(&$variables) {
   _rdf_set_field_rel_attribute($variables);
@@ -297,7 +297,7 @@ function _rdf_set_field_rel_attribute(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node templates.
+ * Implements hook_preprocess_HOOK() for node 04-templates.
  */
 function rdf_preprocess_node(&$variables) {
   // Adds RDFa markup to the node container. The about attribute specifies the
@@ -374,7 +374,7 @@ function rdf_preprocess_node(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for user templates.
+ * Implements hook_preprocess_HOOK() for user 04-templates.
  */
 function rdf_preprocess_user(&$variables) {
   /** @var \Drupal\user\UserInterface $account */
@@ -461,7 +461,7 @@ function rdf_preprocess_username(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for comment templates.
+ * Implements hook_preprocess_HOOK() for comment 04-templates.
  */
 function rdf_preprocess_comment(&$variables) {
   $comment = $variables['comment'];
@@ -558,7 +558,7 @@ function rdf_preprocess_comment(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for taxonomy term templates.
+ * Implements hook_preprocess_HOOK() for taxonomy term 04-templates.
  */
 function rdf_preprocess_taxonomy_term(&$variables) {
   // Adds RDFa markup to the taxonomy term container.
@@ -596,7 +596,7 @@ function rdf_preprocess_image(&$variables) {
 }
 
 /**
- * Prepares variables for RDF metadata templates.
+ * Prepares variables for RDF metadata 04-templates.
  *
  * Default template: rdf-metadata.html.twig.
  *

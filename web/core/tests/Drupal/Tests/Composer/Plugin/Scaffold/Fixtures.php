@@ -327,7 +327,7 @@ class Fixtures {
    *   The directory to place fixtures in.
    * @param array $replacements
    *   Key : value mappings for placeholders to replace in composer.json
-   *   templates.
+   *   04-templates.
    */
   public function cloneFixtureProjects($fixturesDir, array $replacements = []) {
     $filesystem = new Filesystem();

@@ -7,10 +7,10 @@ use Drupal\Core\Extension\ThemeHandlerInterface;
 use Twig\Loader\FilesystemLoader as TwigFilesystemLoader;
 
 /**
- * Loads templates from the filesystem.
+ * Loads 04-templates from the filesystem.
  *
  * This loader adds module and theme template paths as namespaces to the Twig
- * filesystem loader so that templates can be referenced by namespace, like
+ * filesystem loader so that 04-templates can be referenced by namespace, like
  * @block/block.html.twig or @my_theme/page.html.twig.
  */
 class FilesystemLoader extends TwigFilesystemLoader {
@@ -19,7 +19,7 @@ class FilesystemLoader extends TwigFilesystemLoader {
    * Constructs a new FilesystemLoader object.
    *
    * @param string|array $paths
-   *   A path or an array of paths to check for templates.
+   *   A path or an array of paths to check for 04-templates.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler service.
    * @param \Drupal\Core\Extension\ThemeHandlerInterface $theme_handler
@@ -38,15 +38,15 @@ class FilesystemLoader extends TwigFilesystemLoader {
     }
 
     foreach ($namespaces as $name => $path) {
-      $this->addPath($path . '/templates', $name);
+      $this->addPath($path . '/04-templates', $name);
     }
   }
 
   /**
-   * Adds a path where templates are stored.
+   * Adds a path where 04-templates are stored.
    *
    * @param string $path
-   *   A path where to look for templates.
+   *   A path where to look for 04-templates.
    * @param string $namespace
    *   (optional) A path name.
    */

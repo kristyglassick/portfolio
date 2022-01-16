@@ -80,7 +80,7 @@ interface ThemeHandlerInterface {
   /**
    * Finds all the base themes for the specified theme.
    *
-   * Themes can inherit templates and function implementations from earlier
+   * Themes can inherit 04-templates and function implementations from earlier
    * themes.
    *
    * @param \Drupal\Core\Extension\Extension[] $themes

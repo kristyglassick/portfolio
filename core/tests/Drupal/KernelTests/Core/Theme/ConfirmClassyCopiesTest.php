@@ -21,7 +21,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
    */
   public function testClassyHashes() {
     $theme_path = $this->container->get('extension.list.theme')->getPath('classy');
-    foreach (['images', 'css', 'js', 'templates'] as $type => $sub_folder) {
+    foreach (['images', 'css', 'js', '04-templates'] as $type => $sub_folder) {
       $asset_path = "$theme_path/$sub_folder";
       $directory = new \RecursiveDirectoryIterator($asset_path, \FilesystemIterator::CURRENT_AS_FILEINFO | \FilesystemIterator::SKIP_DOTS);
       $iterator = new \RecursiveIteratorIterator($directory);
@@ -59,7 +59,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
   public function testClassyCopies($theme, $path_replace, array $filenames) {
     $theme_path = $this->container->get('extension.list.theme')->getPath($theme);
 
-    foreach (['images', 'css', 'js', 'templates'] as $sub_folder) {
+    foreach (['images', 'css', 'js', '04-templates'] as $sub_folder) {
       $asset_path = "$theme_path/$sub_folder/classy";
       // If a theme has completely customized all files of a type there is
       // potentially no Classy subdirectory for that type. Tests can be skipped
@@ -170,7 +170,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
             'x-office-presentation.png',
             'x-office-spreadsheet.png',
           ],
-          'templates' => [
+          '04-templates' => [
             'node-edit-form.html.twig',
             'image-widget.html.twig',
             'node-add-list.html.twig',
@@ -301,7 +301,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
             'x-office-presentation.png',
             'x-office-spreadsheet.png',
           ],
-          'templates' => [
+          '04-templates' => [
             'filter-caption.html.twig',
             'rdf-metadata.html.twig',
             'help-section.html.twig',
@@ -428,7 +428,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
             'x-office-presentation.png',
             'x-office-spreadsheet.png',
           ],
-          'templates' => [
+          '04-templates' => [
             'filter-guidelines.html.twig',
             'filter-tips.html.twig',
             'file-managed-file.html.twig',
@@ -574,7 +574,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
             'x-office-presentation.png',
             'x-office-spreadsheet.png',
           ],
-          'templates' => [
+          '04-templates' => [
             'node-edit-form.html.twig',
             'image-widget.html.twig',
             'node-add-list.html.twig',
@@ -733,7 +733,7 @@ class ConfirmClassyCopiesTest extends KernelTestBase {
         'x-office-presentation.png' => '8ba9f51c97a2b47de2c8c117aafd7dcd',
         'x-office-spreadsheet.png' => 'fc5d4b32f259ea6d0f960b17a0886f63',
       ],
-      'templates' => [
+      '04-templates' => [
         'node-edit-form.html.twig' => '62333c862703b199fe339677ce6783ac',
         'file-widget-multiple.html.twig' => '93425e782dabe54b88b1516dc681f9ce',
         'image-widget.html.twig' => '03d1151c7e99999174a0113d21375372',

@@ -1460,7 +1460,7 @@ function file_managed_file_save_upload($element, FormStateInterface $form_state)
 }
 
 /**
- * Prepares variables for file form widget templates.
+ * Prepares variables for file form widget 04-templates.
  *
  * Default template: file-managed-file.html.twig.
  *
@@ -1481,7 +1481,7 @@ function template_preprocess_file_managed_file(&$variables) {
 }
 
 /**
- * Prepares variables for file link templates.
+ * Prepares variables for file link 04-templates.
  *
  * Default template: file-link.html.twig.
  *

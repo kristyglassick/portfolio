@@ -765,7 +765,7 @@ function locale_system_file_system_settings_submit(&$form, FormStateInterface $f
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node templates.
+ * Implements hook_preprocess_HOOK() for node 04-templates.
  */
 function locale_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */

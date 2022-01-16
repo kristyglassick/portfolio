@@ -55,38 +55,38 @@ class TwigRegistryLoaderTest extends BrowserTestBase {
    * Tests template extension and includes using the Drupal theme registry.
    */
   public function testTwigNamespaces() {
-    // Test the module-provided extend and insert templates.
+    // Test the module-provided extend and insert 04-templates.
     $this->drupalGet('twig-theme-test/registry-loader');
-    $this->assertSession()->pageTextContains('This line is from twig_theme_test/templates/twig-registry-loader-test-extend.html.twig');
-    $this->assertSession()->pageTextContains('This line is from twig_theme_test/templates/twig-registry-loader-test-include.html.twig');
+    $this->assertSession()->pageTextContains('This line is from twig_theme_test/04-templates/twig-registry-loader-test-extend.html.twig');
+    $this->assertSession()->pageTextContains('This line is from twig_theme_test/04-templates/twig-registry-loader-test-include.html.twig');
 
-    // Enable a theme that overrides the extend and insert templates to ensure
+    // Enable a theme that overrides the extend and insert 04-templates to ensure
     // they are picked up by the registry loader.
     $this->config('system.theme')
       ->set('default', 'test_theme_twig_registry_loader')
       ->save();
     $this->drupalGet('twig-theme-test/registry-loader');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader/templates/twig-registry-loader-test-extend.html.twig');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader/templates/twig-registry-loader-test-include.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader/04-templates/twig-registry-loader-test-extend.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader/04-templates/twig-registry-loader-test-include.html.twig');
 
-    // Enable overriding theme that overrides the extend and insert templates
+    // Enable overriding theme that overrides the extend and insert 04-templates
     // from the base theme.
     $this->config('system.theme')
       ->set('default', 'test_theme_twig_registry_loader_theme')
       ->save();
     $this->drupalGet('twig-theme-test/registry-loader');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/templates/twig-registry-loader-test-extend.html.twig');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/templates/twig-registry-loader-test-include.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/04-templates/twig-registry-loader-test-extend.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/04-templates/twig-registry-loader-test-include.html.twig');
 
     // Enable a subtheme for the theme that doesn't have any overrides to make
-    // sure that templates are being loaded from the first parent which has the
-    // templates.
+    // sure that 04-templates are being loaded from the first parent which has the
+    // 04-templates.
     $this->config('system.theme')
       ->set('default', 'test_theme_twig_registry_loader_subtheme')
       ->save();
     $this->drupalGet('twig-theme-test/registry-loader');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/templates/twig-registry-loader-test-extend.html.twig');
-    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/templates/twig-registry-loader-test-include.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/04-templates/twig-registry-loader-test-extend.html.twig');
+    $this->assertSession()->pageTextContains('This line is from test_theme_twig_registry_loader_theme/04-templates/twig-registry-loader-test-include.html.twig');
   }
 
 }

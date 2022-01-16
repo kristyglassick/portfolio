@@ -484,7 +484,7 @@ class EntityField extends FieldPluginBase implements CacheableDependencyInterfac
       '#title' => $this->t('Use field template'),
       '#type' => 'checkbox',
       '#default_value' => $this->options['field_api_classes'],
-      '#description' => $this->t('If checked, field api classes will be added by field templates. This is not recommended unless your CSS depends upon these classes. If not checked, template will not be used.'),
+      '#description' => $this->t('If checked, field api classes will be added by field 04-templates. This is not recommended unless your CSS depends upon these classes. If not checked, template will not be used.'),
       '#fieldset' => 'style_settings',
       '#weight' => 20,
     ];

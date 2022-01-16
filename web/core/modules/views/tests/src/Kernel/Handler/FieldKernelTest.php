@@ -325,7 +325,7 @@ class FieldKernelTest extends ViewsKernelTestBase {
     });
     $this->assertEquals($old_token, $output, new FormattableMarkup('Make sure the old token style (@token => @value) is not changed in the output (@output)', ['@value' => $random_text, '@output' => $output, '@token' => $job_field->options['alter']['text']]));
 
-    // Verify HTML tags are allowed in rewrite templates while token
+    // Verify HTML tags are allowed in rewrite 04-templates while token
     // replacements are escaped.
     $job_field->options['alter']['text'] = '<h1>{{ job }}</h1>';
     $random_text = $this->randomMachineName();
@@ -333,7 +333,7 @@ class FieldKernelTest extends ViewsKernelTestBase {
     $output = $renderer->executeInRenderContext(new RenderContext(), function () use ($job_field, $row) {
       return $job_field->advancedRender($row);
     });
-    $this->assertEquals('<h1>&lt;span&gt;' . $random_text . '&lt;/span&gt;</h1>', $output, 'Valid tags are allowed in rewrite templates and token replacements.');
+    $this->assertEquals('<h1>&lt;span&gt;' . $random_text . '&lt;/span&gt;</h1>', $output, 'Valid tags are allowed in rewrite 04-templates and token replacements.');
 
     // Verify <script> tags are correctly removed from rewritten text.
     $rewrite_template = '<script>alert("malicious");</script>';

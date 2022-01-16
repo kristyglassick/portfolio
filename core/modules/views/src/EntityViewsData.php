@@ -346,7 +346,7 @@ class EntityViewsData implements EntityHandlerInterface, EntityViewsDataInterfac
   }
 
   /**
-   * Sets the entity links in case corresponding link templates exist.
+   * Sets the entity links in case corresponding link 04-templates exist.
    *
    * @param array $data
    *   The views data of the base table.

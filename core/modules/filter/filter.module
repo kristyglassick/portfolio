@@ -347,7 +347,7 @@ function _filter_tips($format_id, $long = FALSE) {
 }
 
 /**
- * Prepares variables for text format guideline templates.
+ * Prepares variables for text format guideline 04-templates.
  *
  * Default template: filter-guidelines.html.twig.
  *
@@ -367,7 +367,7 @@ function template_preprocess_filter_guidelines(&$variables) {
 }
 
 /**
- * Prepares variables for text format wrapper templates.
+ * Prepares variables for text format wrapper 04-templates.
  *
  * Default template: text-format-wrapper.html.twig.
  *
@@ -387,7 +387,7 @@ function template_preprocess_text_format_wrapper(&$variables) {
 }
 
 /**
- * Prepares variables for filter tips templates.
+ * Prepares variables for filter tips 04-templates.
  *
  * Default template: filter-tips.html.twig.
  *

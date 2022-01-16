@@ -14,7 +14,7 @@ use Twig\NodeVisitor\AbstractNodeVisitor;
  *
  * This is used to ensure that everything printed is wrapped via the
  * TwigExtension->renderVar() function in order to just write {{ content }}
- * in templates instead of having to write {{ render_var(content) }}.
+ * in 04-templates instead of having to write {{ render_var(content) }}.
  *
  * @see twig_render
  */

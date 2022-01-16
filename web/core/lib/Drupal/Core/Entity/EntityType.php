@@ -85,7 +85,7 @@ class EntityType extends PluginDefinition implements EntityTypeInterface {
    */
   protected $permission_granularity = 'entity_type';
   /**
-   * Link templates using the URI template syntax.
+   * Link 04-templates using the URI template syntax.
    *
    * @var array
    */
@@ -643,7 +643,7 @@ class EntityType extends PluginDefinition implements EntityTypeInterface {
    */
   public function setLinkTemplate($key, $path) {
     if ($path[0] !== '/') {
-      throw new \InvalidArgumentException('Link templates accepts paths, which have to start with a leading slash.');
+      throw new \InvalidArgumentException('Link 04-templates accepts paths, which have to start with a leading slash.');
     }
 
     $this->links[$key] = $path;

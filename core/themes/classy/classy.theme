@@ -43,7 +43,7 @@ function classy_form_alter(array &$form, FormStateInterface $form_state, $form_i
 function classy_preprocess_image_widget(array &$variables) {
   $data = &$variables['data'];
 
-  // This prevents image widget templates from rendering preview container HTML
+  // This prevents image widget 04-templates from rendering preview container HTML
   // to users that do not have permission to access these previews.
   // @todo revisit in https://drupal.org/node/953034
   // @todo revisit in https://drupal.org/node/3114318

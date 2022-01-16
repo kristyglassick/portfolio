@@ -56,7 +56,7 @@ use Drupal\Core\Language\LanguageInterface;
  *   in their annotation. The use of entities to store user-editable content to
  *   be displayed in the site is highly recommended over creating your own
  *   method for storing, retrieving, displaying, and internationalizing content.
- * - For Twig templates, use 't' or 'trans' filters to indicate translatable
+ * - For Twig 04-templates, use 't' or 'trans' filters to indicate translatable
  *   text. See https://www.drupal.org/node/2133321 for more information.
  * - In JavaScript code, use the Drupal.t() and Drupal.formatPlural() functions
  *   (defined in core/misc/drupal.js) to translate UI text.

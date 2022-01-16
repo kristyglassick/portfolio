@@ -129,7 +129,7 @@ function quickedit_preprocess_page_title(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for field templates.
+ * Implements hook_preprocess_HOOK() for field 04-templates.
  */
 function quickedit_preprocess_field(&$variables) {
   $variables['#cache']['contexts'][] = 'user.permissions';

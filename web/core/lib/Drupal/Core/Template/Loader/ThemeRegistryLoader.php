@@ -7,7 +7,7 @@ use Twig\Error\LoaderError;
 use Twig\Loader\FilesystemLoader;
 
 /**
- * Loads templates based on information from the Drupal theme registry.
+ * Loads 04-templates based on information from the Drupal theme registry.
  *
  * Allows for template inheritance based on the currently active template.
  */

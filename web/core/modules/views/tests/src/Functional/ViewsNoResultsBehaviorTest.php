@@ -30,7 +30,7 @@ class ViewsNoResultsBehaviorTest extends ViewTestBase {
     $user = $this->createUser([], NULL, TRUE);
     $this->drupalLogin($user);
 
-    // Set the Stark theme and use the default templates from views module.
+    // Set the Stark theme and use the default 04-templates from views module.
     /** @var \Drupal\Core\Extension\ThemeInstallerInterface $theme_installer */
     $theme_installer = \Drupal::service('theme_installer');
     $theme_installer->install(['stark']);

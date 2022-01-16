@@ -8,7 +8,7 @@
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for image style preview templates.
+ * Prepares variables for image style preview 04-templates.
  *
  * Default template: image-style-preview.html.twig.
  *
@@ -102,7 +102,7 @@ function template_preprocess_image_style_preview(&$variables) {
 }
 
 /**
- * Prepares variables for image anchor templates.
+ * Prepares variables for image anchor 04-templates.
  *
  * Default template: image-anchor.html.twig.
  *

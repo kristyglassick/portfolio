@@ -236,7 +236,7 @@ class RegistryTest extends KernelTestBase {
   }
 
   /**
-   * Tests theme-provided templates that are registered by modules.
+   * Tests theme-provided 04-templates that are registered by modules.
    */
   public function testThemeTemplatesRegisteredByModules() {
     $theme_handler = \Drupal::service('theme_handler');

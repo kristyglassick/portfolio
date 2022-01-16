@@ -350,7 +350,7 @@ function book_form_node_confirm_form_alter(&$form, FormStateInterface $form_stat
 }
 
 /**
- * Prepares variables for book listing block templates.
+ * Prepares variables for book listing block 04-templates.
  *
  * Default template: book-all-books-block.html.twig.
  *
@@ -377,7 +377,7 @@ function template_preprocess_book_all_books_block(&$variables) {
 }
 
 /**
- * Prepares variables for book navigation templates.
+ * Prepares variables for book navigation 04-templates.
  *
  * Default template: book-navigation.html.twig.
  *
@@ -457,7 +457,7 @@ function template_preprocess_book_navigation(&$variables) {
 }
 
 /**
- * Prepares variables for book export templates.
+ * Prepares variables for book export 04-templates.
  *
  * Default template: book-export-html.html.twig.
  *
@@ -483,7 +483,7 @@ function template_preprocess_book_export_html(&$variables) {
 }
 
 /**
- * Prepares variables for single node export templates.
+ * Prepares variables for single node export 04-templates.
  *
  * Default template: book-node-export-html.html.twig.
  *

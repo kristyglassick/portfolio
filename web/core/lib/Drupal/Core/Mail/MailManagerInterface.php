@@ -14,7 +14,7 @@ interface MailManagerInterface extends PluginManagerInterface {
    *
    * Sending an email works with defining an email template (subject, text and
    * possibly email headers) and the replacement values to use in the
-   * appropriate places in the template. Processed email templates are requested
+   * appropriate places in the template. Processed email 04-templates are requested
    * from hook_mail() from the module sending the email. Any module can modify
    * the composed email message array using hook_mail_alter(). Finally
    * \Drupal::service('plugin.manager.mail')->mail() sends the email, which can

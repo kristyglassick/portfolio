@@ -13,7 +13,7 @@ use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
- * Prepares variables for select element templates.
+ * Prepares variables for select element 04-templates.
  *
  * Default template: select.html.twig.
  *
@@ -179,7 +179,7 @@ function form_get_options($element, $key) {
 }
 
 /**
- * Prepares variables for fieldset element templates.
+ * Prepares variables for fieldset element 04-templates.
  *
  * Default template: fieldset.html.twig.
  *
@@ -233,7 +233,7 @@ function template_preprocess_fieldset(&$variables) {
 }
 
 /**
- * Prepares variables for details element templates.
+ * Prepares variables for details element 04-templates.
  *
  * Default template: details.html.twig.
  *
@@ -271,7 +271,7 @@ function template_preprocess_details(&$variables) {
 }
 
 /**
- * Prepares variables for radios templates.
+ * Prepares variables for radios 04-templates.
  *
  * Default template: radios.html.twig.
  *
@@ -294,7 +294,7 @@ function template_preprocess_radios(&$variables) {
 }
 
 /**
- * Prepares variables for checkboxes templates.
+ * Prepares variables for checkboxes 04-templates.
  *
  * Default template: checkboxes.html.twig.
  *
@@ -316,7 +316,7 @@ function template_preprocess_checkboxes(&$variables) {
 }
 
 /**
- * Prepares variables for vertical tabs templates.
+ * Prepares variables for vertical tabs 04-templates.
  *
  * Default template: vertical-tabs.html.twig.
  *
@@ -331,7 +331,7 @@ function template_preprocess_vertical_tabs(&$variables) {
 }
 
 /**
- * Prepares variables for input templates.
+ * Prepares variables for input 04-templates.
  *
  * Default template: input.html.twig.
  *
@@ -350,7 +350,7 @@ function template_preprocess_input(&$variables) {
 }
 
 /**
- * Prepares variables for form templates.
+ * Prepares variables for form 04-templates.
  *
  * Default template: form.html.twig.
  *
@@ -373,7 +373,7 @@ function template_preprocess_form(&$variables) {
 }
 
 /**
- * Prepares variables for textarea templates.
+ * Prepares variables for textarea 04-templates.
  *
  * Default template: textarea.html.twig.
  *
@@ -397,7 +397,7 @@ function template_preprocess_textarea(&$variables) {
 
 /**
  * Returns HTML for a form element.
- * Prepares variables for form element templates.
+ * Prepares variables for form element 04-templates.
  *
  * Default template: form-element.html.twig.
  *
@@ -507,7 +507,7 @@ function template_preprocess_form_element(&$variables) {
 }
 
 /**
- * Prepares variables for form label templates.
+ * Prepares variables for form label 04-templates.
  *
  * Form element labels include the #title and a #required marker. The label is
  * associated with the element itself by the element #id. Labels may appear

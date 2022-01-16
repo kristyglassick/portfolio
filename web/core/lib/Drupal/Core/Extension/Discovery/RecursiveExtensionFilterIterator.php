@@ -66,7 +66,7 @@ class RecursiveExtensionFilterIterator extends \RecursiveFilterIterator {
     'images',
     'js',
     'misc',
-    'templates',
+    '04-templates',
     // Legacy subdirectories.
     'includes',
     // Test subdirectories.
