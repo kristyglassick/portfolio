@@ -46,7 +46,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LinkUri extends ProcessPluginBase implements ContainerFactoryPluginInterface {
 
   /**
-   * The entity type manager, used to fetch entity link templates.
+   * The entity type manager, used to fetch entity link 04-templates.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
@@ -62,7 +62,7 @@ class LinkUri extends ProcessPluginBase implements ContainerFactoryPluginInterfa
    * @param mixed $plugin_definition
    *   The plugin implementation definition.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager, used to fetch entity link templates.
+   *   The entity type manager, used to fetch entity link 04-templates.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager) {
     $configuration += [

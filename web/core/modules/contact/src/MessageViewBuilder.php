@@ -16,7 +16,7 @@ class MessageViewBuilder extends EntityViewBuilder {
    */
   protected function getBuildDefaults(EntityInterface $entity, $view_mode) {
     $build = parent::getBuildDefaults($entity, $view_mode);
-    // The message fields are individually rendered into email templates, so
+    // The message fields are individually rendered into email 04-templates, so
     // the entity has no template itself.
     unset($build['#theme']);
     return $build;

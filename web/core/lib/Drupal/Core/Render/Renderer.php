@@ -187,7 +187,7 @@ class Renderer implements RendererInterface {
    */
   public function render(&$elements, $is_root_call = FALSE) {
     // Since #pre_render, #post_render, #lazy_builder callbacks and theme
-    // functions or templates may be used for generating a render array's
+    // functions or 04-templates may be used for generating a render array's
     // content, and we might be rendering the main content for the page, it is
     // possible that any of them throw an exception that will cause a different
     // page to be rendered (e.g. throwing

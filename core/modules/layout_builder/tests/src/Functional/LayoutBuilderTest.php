@@ -176,7 +176,7 @@ class LayoutBuilderTest extends BrowserTestBase {
     $assert_session = $this->assertSession();
     $page = $this->getSession()->getPage();
 
-    // Log in as a user that can edit layout templates.
+    // Log in as a user that can edit layout 04-templates.
     $this->drupalLogin($this->drupalCreateUser([
       'configure any layout',
       'administer user display',
@@ -193,7 +193,7 @@ class LayoutBuilderTest extends BrowserTestBase {
     $page->clickLink('Layout');
     $assert_session->pageTextContains('You are editing the layout for this user. Edit the template for all users instead.');
 
-    // Log in as a user that cannot edit layout templates.
+    // Log in as a user that cannot edit layout 04-templates.
     $this->drupalLogin($this->drupalCreateUser([
       'configure any layout',
     ]));

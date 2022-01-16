@@ -108,7 +108,7 @@ class EntityUrlTest extends UnitTestCase {
   }
 
   /**
-   * Tests the toUrl() method with simple link templates.
+   * Tests the toUrl() method with simple link 04-templates.
    *
    * @param string $link_template
    *   The link template to test.
@@ -128,7 +128,7 @@ class EntityUrlTest extends UnitTestCase {
 
     /** @var \Drupal\Core\Url $url */
     $url = $entity->toUrl($link_template);
-    // The entity ID is the sole route parameter for the link templates tested
+    // The entity ID is the sole route parameter for the link 04-templates tested
     // here.
     $this->assertUrl($expected_route_name, ['test_entity' => $this->entityId], $entity, TRUE, $url);
   }
@@ -206,7 +206,7 @@ class EntityUrlTest extends UnitTestCase {
   }
 
   /**
-   * Tests the toUrl() method with link templates without an entity ID.
+   * Tests the toUrl() method with link 04-templates without an entity ID.
    *
    * @param string $link_template
    *   The link template to test.
@@ -297,7 +297,7 @@ class EntityUrlTest extends UnitTestCase {
   }
 
   /**
-   * Tests the toUrl() method with neither link templates nor a URI callback.
+   * Tests the toUrl() method with neither link 04-templates nor a URI callback.
    *
    * @param array $bundle_info
    *   An array of bundle info to register.

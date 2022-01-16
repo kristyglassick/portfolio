@@ -35,7 +35,7 @@ class TwigSettingsTest extends BrowserTestBase {
     $this->rebuildContainer();
 
     // Check isAutoReload() via the Twig service container.
-    $this->assertTrue($this->container->get('twig')->isAutoReload(), 'Automatic reloading of Twig templates enabled.');
+    $this->assertTrue($this->container->get('twig')->isAutoReload(), 'Automatic reloading of Twig 04-templates enabled.');
 
     // Disable auto reload and check the service container again.
     $parameters = $this->container->getParameter('twig.config');
@@ -43,7 +43,7 @@ class TwigSettingsTest extends BrowserTestBase {
     $this->setContainerParameter('twig.config', $parameters);
     $this->rebuildContainer();
 
-    $this->assertFalse($this->container->get('twig')->isAutoReload(), 'Automatic reloading of Twig templates disabled.');
+    $this->assertFalse($this->container->get('twig')->isAutoReload(), 'Automatic reloading of Twig 04-templates disabled.');
   }
 
   /**
@@ -91,7 +91,7 @@ class TwigSettingsTest extends BrowserTestBase {
     // Reset the theme registry, so that the new theme is used.
     $this->container->set('theme.registry', NULL);
 
-    // Load array of Twig templates.
+    // Load array of Twig 04-templates.
     // reset() is necessary to invalidate caches tagged with 'theme_registry'.
     $registry = $this->container->get('theme.registry');
     $registry->reset();
@@ -122,7 +122,7 @@ class TwigSettingsTest extends BrowserTestBase {
   }
 
   /**
-   * Tests twig inline templates with auto_reload.
+   * Tests twig inline 04-templates with auto_reload.
    */
   public function testTwigInlineWithAutoReload() {
     $parameters = $this->container->getParameter('twig.config');

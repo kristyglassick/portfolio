@@ -12,7 +12,7 @@ use Drupal\update\UpdateFetcherInterface;
 use Drupal\update\UpdateManagerInterface;
 
 /**
- * Prepares variables for project status report templates.
+ * Prepares variables for project status report 04-templates.
  *
  * Default template: update-report.html.twig.
  *
@@ -105,7 +105,7 @@ function template_preprocess_update_report(&$variables) {
 }
 
 /**
- * Prepares variables for update version templates.
+ * Prepares variables for update version 04-templates.
  *
  * Default template: update-version.html.twig.
  *
@@ -135,7 +135,7 @@ function template_preprocess_update_version(array &$variables) {
 }
 
 /**
- * Prepares variables for update project status templates.
+ * Prepares variables for update project status 04-templates.
  *
  * Default template: update-project-status.html.twig.
  *
@@ -337,7 +337,7 @@ function template_preprocess_update_project_status(&$variables) {
 }
 
 /**
- * Prepares variables for update fetch error message templates.
+ * Prepares variables for update fetch error message 04-templates.
  *
  * Default template: update-fetch-error-message.html.twig.
  *

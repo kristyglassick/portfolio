@@ -198,7 +198,7 @@ function _aggregator_allowed_tags() {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block templates.
+ * Implements hook_preprocess_HOOK() for block 04-templates.
  */
 function aggregator_preprocess_block(&$variables) {
   if ($variables['configuration']['provider'] == 'aggregator') {

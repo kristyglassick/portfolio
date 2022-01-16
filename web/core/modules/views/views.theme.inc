@@ -12,7 +12,7 @@ use Drupal\Core\Url;
 use Drupal\Core\Utility\TableSort;
 
 /**
- * Prepares variables for view templates.
+ * Prepares variables for view 04-templates.
  *
  * Default template: views-view.html.twig.
  *
@@ -77,7 +77,7 @@ function template_preprocess_views_view(&$variables) {
 }
 
 /**
- * Prepares variables for views fields templates.
+ * Prepares variables for views fields 04-templates.
  *
  * Default template: views-view-fields.html.twig.
  *
@@ -205,7 +205,7 @@ function template_preprocess_views_view_fields(&$variables) {
 }
 
 /**
- * Prepares variables for views single grouping templates.
+ * Prepares variables for views single grouping 04-templates.
  *
  * Default template: views-view-grouping.html.twig.
  *
@@ -223,7 +223,7 @@ function template_preprocess_views_view_grouping(&$variables) {
 }
 
 /**
- * Prepares variables for views field templates.
+ * Prepares variables for views field 04-templates.
  *
  * Default template: views-view-field.html.twig.
  *
@@ -239,7 +239,7 @@ function template_preprocess_views_view_field(&$variables) {
 }
 
 /**
- * Prepares variables for views summary templates.
+ * Prepares variables for views summary 04-templates.
  *
  * The summary prints a single record from a row, with fields.
  *
@@ -326,7 +326,7 @@ function template_preprocess_views_view_summary(&$variables) {
 }
 
 /**
- * Prepares variables for unformatted summary view templates.
+ * Prepares variables for unformatted summary view 04-templates.
  *
  * Default template: views-view-summary-unformatted.html.twig.
  *
@@ -412,7 +412,7 @@ function template_preprocess_views_view_summary_unformatted(&$variables) {
 }
 
 /**
- * Prepares variables for views table templates.
+ * Prepares variables for views table 04-templates.
  *
  * Default template: views-view-table.html.twig.
  *
@@ -661,7 +661,7 @@ function template_preprocess_views_view_table(&$variables) {
   }
 
   // For backwards compatibility, initialize the 'summary' and 'description'
-  // variables, although core templates now all use 'summary_element' instead.
+  // variables, although core 04-templates now all use 'summary_element' instead.
   $variables['summary'] = $handler->options['summary'];
   $variables['description'] = $handler->options['description'];
   if (!empty($handler->options['summary']) || !empty($handler->options['description'])) {
@@ -694,7 +694,7 @@ function template_preprocess_views_view_table(&$variables) {
 }
 
 /**
- * Prepares variables for views grid style templates.
+ * Prepares variables for views grid style 04-templates.
  *
  * Default template: views-view-grid.html.twig.
  *
@@ -795,7 +795,7 @@ function template_preprocess_views_view_grid(&$variables) {
 }
 
 /**
- * Prepares variables for views unformatted rows templates.
+ * Prepares variables for views unformatted rows 04-templates.
  *
  * Default template: views-view-unformatted.html.twig.
  *
@@ -822,7 +822,7 @@ function template_preprocess_views_view_unformatted(&$variables) {
 }
 
 /**
- * Prepares variables for Views HTML list templates.
+ * Prepares variables for Views HTML list 04-templates.
  *
  * Default template: views-view-list.html.twig.
  *
@@ -854,7 +854,7 @@ function template_preprocess_views_view_list(&$variables) {
 }
 
 /**
- * Prepares variables for RSS feed templates.
+ * Prepares variables for RSS feed 04-templates.
  *
  * Default template: views-view-rss.html.twig.
  *
@@ -899,7 +899,7 @@ function template_preprocess_views_view_rss(&$variables) {
 }
 
 /**
- * Prepares variables for views RSS item templates.
+ * Prepares variables for views RSS item 04-templates.
  *
  * Default template: views-view-row-rss.html.twig.
  *
@@ -930,7 +930,7 @@ function template_preprocess_views_view_row_rss(&$variables) {
 }
 
 /**
- * Prepares variables for OPML feed templates.
+ * Prepares variables for OPML feed 04-templates.
  *
  * Default template: views-view-opml.html.twig.
  *
@@ -966,7 +966,7 @@ function template_preprocess_views_view_opml(&$variables) {
 }
 
 /**
- * Prepares variables for views OPML item templates.
+ * Prepares variables for views OPML item 04-templates.
  *
  * Default template: views-view-row-opml.html.twig.
  *
@@ -981,7 +981,7 @@ function template_preprocess_views_view_row_opml(&$variables) {
 }
 
 /**
- * Prepares variables for views exposed form templates.
+ * Prepares variables for views exposed form 04-templates.
  *
  * Default template: views-exposed-form.html.twig.
  *
@@ -1007,7 +1007,7 @@ function template_preprocess_views_exposed_form(&$variables) {
 }
 
 /**
- * Prepares variables for views mini-pager templates.
+ * Prepares variables for views mini-pager 04-templates.
  *
  * Default template: views-mini-pager.html.twig.
  *
@@ -1067,13 +1067,13 @@ function template_preprocess_views_mini_pager(&$variables) {
 /**
  * @defgroup views_templates Views template files
  * @{
- * Describes various views templates & overriding options.
+ * Describes various views 04-templates & overriding options.
  *
- * All views templates can be overridden with a variety of names, using
+ * All views 04-templates can be overridden with a variety of names, using
  * the view, the display ID of the view, the display type of the view,
  * or some combination thereof.
  *
- * For each view, there will be a minimum of two templates used. The first
+ * For each view, there will be a minimum of two 04-templates used. The first
  * is used for all views: views-view.html.twig.
  *
  * The second template is determined by the style selected for the view. Note
@@ -1086,7 +1086,7 @@ function template_preprocess_views_mini_pager(&$variables) {
  * Many styles will then farm out the actual display of each row to a row
  * style; the default row style is views-view-fields.html.twig.
  *
- * Here is an example of all the templates that will be tried in the following
+ * Here is an example of all the 04-templates that will be tried in the following
  * case:
  *
  * View, named foobar. Style: unformatted. Row style: Fields. Display: Page.

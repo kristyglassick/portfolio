@@ -8,7 +8,7 @@
 /**
  * @defgroup themeable Theme system overview
  * @{
- * Functions and templates for the user interface that themes can override.
+ * Functions and 04-templates for the user interface that themes can override.
  *
  * Drupal's theme system allows a theme to have nearly complete control over
  * the appearance of the site, which includes both the markup and the CSS used
@@ -26,7 +26,7 @@
  *
  * @section sec_twig_theme Twig Templating Engine
  * Drupal 8 uses the templating engine Twig. Twig offers developers a fast,
- * secure, and flexible method for building templates for Drupal 8 sites. Twig
+ * secure, and flexible method for building 04-templates for Drupal 8 sites. Twig
  * also offers substantial usability improvements over PHPTemplate, and does
  * not require front-end developers to know PHP to build and manipulate Drupal
  * 8 themes.
@@ -61,7 +61,7 @@
  * @endcode
  * Given this definition, the template file with the default implementation is
  * search-result.html.twig, which can be found in the
- * core/modules/search/templates directory, and the variables for rendering are
+ * core/modules/search/04-templates directory, and the variables for rendering are
  * the search result and the plugin ID. In addition, there is a function
  * template_preprocess_search_result(), located in file search.pages.inc, which
  * preprocesses the information from the input variables so that it can be
@@ -70,11 +70,11 @@
  *
  * hook_theme() implementations can also specify that a theme hook
  * implementation is a theme function, but that is uncommon and not recommended.
- * Note that while Twig templates will auto-escape variables, theme functions
+ * Note that while Twig 04-templates will auto-escape variables, theme functions
  * must explicitly escape any variables by using theme_render_and_autoescape().
  * Failure to do so is likely to result in security vulnerabilities. Theme
  * functions are deprecated in Drupal 8.0.x and will be removed before
- * Drupal 9.0.x. Use Twig templates instead.
+ * Drupal 9.0.x. Use Twig 04-templates instead.
  *
  * @section sec_overriding_theme_hooks Overriding Theme Hooks
  * Themes may register new theme hooks within a hook_theme() implementation, but
@@ -83,7 +83,7 @@
  * default implementation by creating a template file with the same name as the
  * default implementation; for example, to override the display of search
  * results, a theme would add a file called search-result.html.twig to its
- * templates directory. A good starting point for doing this is normally to
+ * 04-templates directory. A good starting point for doing this is normally to
  * copy the default implementation template, and then modifying it as desired.
  *
  * In the uncommon case that a theme hook uses a theme function instead of a
@@ -97,10 +97,10 @@
  * bartik_search_result() in the bartik.theme file, if the search_result hook
  * implementation was a function instead of a template). Normally, copying the
  * default function is again a good starting point for overriding its behavior.
- * Again, note that theme functions (unlike templates) must explicitly escape
+ * Again, note that theme functions (unlike 04-templates) must explicitly escape
  * variables using theme_render_and_autoescape() or risk security
  * vulnerabilities. Theme functions are deprecated in Drupal 8.0.x and will be
- * removed before Drupal 9.0.x. Use Twig templates instead.
+ * removed before Drupal 9.0.x. Use Twig 04-templates instead.
  *
  * @section sec_preprocess_templates Preprocessing for Template Files
  * If the theme implementation is a template file, several functions are called
@@ -152,7 +152,7 @@
  * - In a render array, the '#theme' property can be set to the name of a hook
  *   with a '__SUGGESTION' suffix. For example, in search results theming, the
  *   hook 'item_list__search_results' is given. In this case, the render system
- *   will look for theme templates called item-list--search-results.html.twig,
+ *   will look for theme 04-templates called item-list--search-results.html.twig,
  *   which would only be used for rendering item lists containing search
  *   results, and if this template is not found, it will fall back to using the
  *   base item-list.html.twig template. This type of suggestion can also be
@@ -208,7 +208,7 @@
  * @code
  * $metadata = \Drupal::service('twig')->getTemplateMetadata('/path/to/template.html.twig');
  * @endcode
- * Note: all front matter is stripped from templates prior to rendering.
+ * Note: all front matter is stripped from 04-templates prior to rendering.
  *
  * @see hooks
  * @see callbacks
@@ -548,10 +548,10 @@ function hook_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormSta
 }
 
 /**
- * Preprocess theme variables for templates.
+ * Preprocess theme variables for 04-templates.
  *
- * This hook allows modules to preprocess theme variables for theme templates.
- * It is called for all theme hooks implemented as templates, but not for theme
+ * This hook allows modules to preprocess theme variables for theme 04-templates.
+ * It is called for all theme hooks implemented as 04-templates, but not for theme
  * hooks implemented as functions. hook_preprocess_HOOK() can be used to
  * preprocess variables for a specific theme hook, whether implemented as a
  * template or function.
@@ -669,7 +669,7 @@ function hook_theme_suggestions_HOOK(array $variables) {
  * general hooks are called first followed by the more specific.
  *
  * In the following example, we provide an alternative template suggestion to
- * node and taxonomy term templates based on the user being logged in.
+ * node and taxonomy term 04-templates based on the user being logged in.
  * @code
  * function MYMODULE_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
  *   if (\Drupal::currentUser()->isAuthenticated() && in_array($hook, array('node', 'taxonomy_term'))) {
@@ -1257,7 +1257,7 @@ function hook_theme($existing, $type, $theme, $path) {
  * @code
  * $theme_registry['block_content_add_list'] = array (
  *   'template' => 'block-content-add-list',
- *   'path' => 'core/themes/seven/templates',
+ *   'path' => 'core/themes/seven/04-templates',
  *   'type' => 'theme_engine',
  *   'theme path' => 'core/themes/seven',
  *   'includes' => array (
@@ -1291,7 +1291,7 @@ function hook_theme_registry_alter(&$theme_registry) {
 }
 
 /**
- * Alter the default, hook-independent variables for all templates.
+ * Alter the default, hook-independent variables for all 04-templates.
  *
  * Allows modules to provide additional default template variables or manipulate
  * existing. This hook is invoked from template_preprocess() after basic default

@@ -14,7 +14,7 @@ use Drupal\Core\Plugin\PluginFormInterface;
  *   label = @Translation("Layout plugin (with settings)"),
  *   category = @Translation("Layout test"),
  *   description = @Translation("Test layout"),
- *   template = "templates/layout-test-plugin",
+ *   template = "04-templates/layout-test-plugin",
  *   regions = {
  *     "main" = {
  *       "label" = @Translation("Main Region")

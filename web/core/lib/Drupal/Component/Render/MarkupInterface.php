@@ -17,7 +17,7 @@ namespace Drupal\Component\Render;
  * FormattableMarkup and TranslatableMarkup always sanitize their output when
  * used correctly.
  *
- * If the object is going to be used directly in Twig templates it should
+ * If the object is going to be used directly in Twig 04-templates it should
  * implement \Countable so it can be used in if statements.
  *
  * @see \Drupal\Component\Render\MarkupTrait

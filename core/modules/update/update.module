@@ -504,7 +504,7 @@ function _update_project_status_sort($a, $b) {
 }
 
 /**
- * Prepares variables for last time update data was checked templates.
+ * Prepares variables for last time update data was checked 04-templates.
  *
  * Default template: update-last-check.html.twig.
  *

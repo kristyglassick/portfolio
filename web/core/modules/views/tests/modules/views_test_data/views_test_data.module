@@ -45,7 +45,7 @@ function views_test_data_handler_test_access_callback_argument($argument = FALSE
 }
 
 /**
- * Implements hook_preprocess_HOOK() for views table templates.
+ * Implements hook_preprocess_HOOK() for views table 04-templates.
  */
 function views_test_data_preprocess_views_view_table(&$variables) {
   if ($variables['view']->storage->id() == 'test_view_render') {
@@ -56,7 +56,7 @@ function views_test_data_preprocess_views_view_table(&$variables) {
 }
 
 /**
- * Prepares variables for the mapping row style test templates.
+ * Prepares variables for the mapping row style test 04-templates.
  *
  * Default template: views-view-mapping-test.html.twig.
  *

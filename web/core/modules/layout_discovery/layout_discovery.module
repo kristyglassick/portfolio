@@ -29,7 +29,7 @@ function layout_discovery_theme() {
 }
 
 /**
- * Prepares variables for layout templates.
+ * Prepares variables for layout 04-templates.
  *
  * @param array &$variables
  *   An associative array containing:

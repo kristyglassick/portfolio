@@ -76,7 +76,7 @@ function responsive_image_theme() {
 }
 
 /**
- * Prepares variables for responsive image formatter templates.
+ * Prepares variables for responsive image formatter 04-templates.
  *
  * Default template: responsive-image-formatter.html.twig.
  *

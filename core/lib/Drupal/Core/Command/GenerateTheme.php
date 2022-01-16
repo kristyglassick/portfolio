@@ -174,7 +174,7 @@ class GenerateTheme extends Command {
       }
     }
 
-    // Rename references to libraries in templates.
+    // Rename references to libraries in 04-templates.
     $iterator = new TemplateDirIterator(new \RegexIterator(
       new \RecursiveIteratorIterator(
         new \RecursiveDirectoryIterator($tmp_dir), \RecursiveIteratorIterator::LEAVES_ONLY

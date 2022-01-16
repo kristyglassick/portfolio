@@ -10,7 +10,7 @@ use Drupal\Core\Template\Attribute;
 use Drupal\Core\Language\LanguageInterface;
 
 /**
- * Prepares variables for CKEditor settings toolbar templates.
+ * Prepares variables for CKEditor settings toolbar 04-templates.
  *
  * Default template: ckeditor-settings-toolbar.html.twig.
  *

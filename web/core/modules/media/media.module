@@ -145,7 +145,7 @@ function media_theme_suggestions_media(array $variables) {
 }
 
 /**
- * Prepares variables for media templates.
+ * Prepares variables for media 04-templates.
  *
  * Default template: media.html.twig.
  *
@@ -161,7 +161,7 @@ function template_preprocess_media(array &$variables) {
   $variables['view_mode'] = $variables['elements']['#view_mode'];
   $variables['name'] = $variables['media']->label();
 
-  // Helpful $content variable for templates.
+  // Helpful $content variable for 04-templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }

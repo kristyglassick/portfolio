@@ -29,7 +29,7 @@ class TwigEnvironmentTest extends BrowserTestBase {
     // Test the Twig embed tag.
     $this->drupalGet('twig-theme-test/embed-tag');
     $assert_session->statusCodeEquals(200);
-    $assert_session->responseContains('This line is from twig_theme_test/templates/twig-theme-test-embed-tag-embedded.html.twig');
+    $assert_session->responseContains('This line is from twig_theme_test/04-templates/twig-theme-test-embed-tag-embedded.html.twig');
   }
 
 }

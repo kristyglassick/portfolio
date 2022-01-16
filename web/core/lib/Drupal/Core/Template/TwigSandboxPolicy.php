@@ -7,11 +7,11 @@ use Twig\Sandbox\SecurityError;
 use Twig\Sandbox\SecurityPolicyInterface;
 
 /**
- * Default sandbox policy for Twig templates.
+ * Default sandbox policy for Twig 04-templates.
  *
  * Twig's sandbox extension is usually used to evaluate untrusted code by
  * limiting access to potentially unsafe properties or methods. Since we do not
- * use ViewModels when passing objects to Twig templates, we limit what those
+ * use ViewModels when passing objects to Twig 04-templates, we limit what those
  * objects can do by only loading certain classes, method names, and method
  * names with an allowed prefix. All object properties may be accessed.
  */

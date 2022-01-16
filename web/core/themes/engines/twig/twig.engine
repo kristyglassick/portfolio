@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Handles integration of Twig templates with the Drupal theme system.
+ * Handles integration of Twig 04-templates with the Drupal theme system.
  */
 
 use Drupal\Component\Utility\Html;

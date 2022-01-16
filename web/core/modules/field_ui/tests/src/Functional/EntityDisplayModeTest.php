@@ -82,7 +82,7 @@ class EntityDisplayModeTest extends BrowserTestBase {
     // Test editing the view mode.
     $this->drupalGet('admin/structure/display-modes/view/manage/entity_test.' . $edit['id']);
 
-    // Test that the link templates added by field_ui_entity_type_build() are
+    // Test that the link 04-templates added by field_ui_entity_type_build() are
     // generating valid routes.
     $view_mode = EntityViewMode::load('entity_test.' . $edit['id']);
     $this->assertEquals(Url::fromRoute('entity.entity_view_mode.collection')->toString(), $view_mode->toUrl('collection')->toString());
@@ -136,7 +136,7 @@ class EntityDisplayModeTest extends BrowserTestBase {
     // Test editing the form mode.
     $this->drupalGet('admin/structure/display-modes/form/manage/entity_test.' . $edit['id']);
 
-    // Test that the link templates added by field_ui_entity_type_build() are
+    // Test that the link 04-templates added by field_ui_entity_type_build() are
     // generating valid routes.
     $form_mode = EntityFormMode::load('entity_test.' . $edit['id']);
     $this->assertEquals(Url::fromRoute('entity.entity_form_mode.collection')->toString(), $form_mode->toUrl('collection')->toString());

@@ -88,7 +88,7 @@ trait AssertContentTrait {
    *
    * Use this (once) after performing an operation that sets new raw content,
    * and when you want to use e.g. assertText() but ignore potential white-space
-   * caused by HTML output templates.
+   * caused by HTML output 04-templates.
    */
   protected function removeWhiteSpace() {
     $this->content = preg_replace('@>\s+<@', '><', $this->content);

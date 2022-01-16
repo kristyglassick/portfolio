@@ -69,7 +69,7 @@ class ThemeSuggestionsAlterTest extends BrowserTestBase {
   }
 
   /**
-   * Tests that theme suggestion alter hooks work for templates.
+   * Tests that theme suggestion alter hooks work for 04-templates.
    */
   public function testTemplateSuggestionsAlter() {
     $this->drupalGet('theme-test/suggestion-alter');

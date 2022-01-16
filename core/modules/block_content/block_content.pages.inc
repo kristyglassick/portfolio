@@ -9,7 +9,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
- * Prepares variables for a custom block type creation list templates.
+ * Prepares variables for a custom block type creation list 04-templates.
  *
  * Default template: block-content-add-list.html.twig.
  *

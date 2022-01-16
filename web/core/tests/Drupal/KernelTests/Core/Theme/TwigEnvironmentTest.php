@@ -28,7 +28,7 @@ class TwigEnvironmentTest extends KernelTestBase {
   protected static $modules = ['system'];
 
   /**
-   * Tests inline templates.
+   * Tests inline 04-templates.
    */
   public function testInlineTemplate() {
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
@@ -67,7 +67,7 @@ class TwigEnvironmentTest extends KernelTestBase {
     $this->assertEquals('test-with-context muuh', $renderer->renderRoot($element));
     $this->assertEquals('test-with-context muuh', $renderer->renderRoot($element_copy));
 
-    // Tests caching of inline templates with long content to ensure the
+    // Tests caching of inline 04-templates with long content to ensure the
     // generated cache key can be used as a filename.
     $element = [];
     $element['test'] = [
@@ -114,7 +114,7 @@ class TwigEnvironmentTest extends KernelTestBase {
   }
 
   /**
-   * Ensures that templates resolve to the same class name and cache file.
+   * Ensures that 04-templates resolve to the same class name and cache file.
    */
   public function testTemplateClassname() {
     /** @var \Drupal\Core\Template\TwigEnvironment $environment */
@@ -131,7 +131,7 @@ class TwigEnvironmentTest extends KernelTestBase {
     $key_namespaced = $environment->getCache()->generateKey($name_namespaced, $class_namespaced);
 
     // Test using a direct filesystem template path.
-    $name_direct = 'core/modules/system/templates/container.html.twig';
+    $name_direct = 'core/modules/system/04-templates/container.html.twig';
     $class_direct = $environment->getTemplateClass($name_direct);
     $key_direct = $environment->getCache()->generateKey($name_direct, $class_direct);
 
@@ -150,12 +150,12 @@ class TwigEnvironmentTest extends KernelTestBase {
     // Note: Later we refetch the twig service in order to bypass its internal
     // static cache.
     $environment = \Drupal::service('twig');
-    $template_path = 'core/modules/system/templates/container.html.twig';
+    $template_path = 'core/modules/system/04-templates/container.html.twig';
 
     // A template basename greater than the constant
     // TwigPhpStorageCache::SUFFIX_SUBSTRING_LENGTH should get truncated.
     $cache = $environment->getCache();
-    $long_name = 'core/modules/system/templates/block--system-messages-block.html.twig';
+    $long_name = 'core/modules/system/04-templates/block--system-messages-block.html.twig';
     $this->assertGreaterThan(TwigPhpStorageCache::SUFFIX_SUBSTRING_LENGTH, strlen(basename($long_name)));
     $class = $environment->getTemplateClass($long_name);
     $key = $cache->generateKey($long_name, $class);

@@ -35,7 +35,7 @@ use Drupal\views\ViewExecutable;
  *   information about entities.
  * - Implement hooks: A few operations in Views can be influenced by hooks.
  *   See the @link views_hooks Views hooks topic @endlink for a list.
- * - Theming: See the @link views_templates Views templates topic @endlink
+ * - Theming: See the @link views_templates Views 04-templates topic @endlink
  *   for more information.
  *
  * @see \Drupal\views\ViewExecutable

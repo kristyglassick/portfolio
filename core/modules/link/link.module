@@ -49,7 +49,7 @@ function link_theme() {
 }
 
 /**
- * Prepares variables for separated link field templates.
+ * Prepares variables for separated link field 04-templates.
  *
  * This template outputs a separate title and link.
  *

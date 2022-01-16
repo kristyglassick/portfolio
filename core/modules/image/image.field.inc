@@ -8,7 +8,7 @@
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for image widget templates.
+ * Prepares variables for image widget 04-templates.
  *
  * Default template: image-widget.html.twig.
  *
@@ -29,7 +29,7 @@ function template_preprocess_image_widget(&$variables) {
 }
 
 /**
- * Prepares variables for image formatter templates.
+ * Prepares variables for image formatter 04-templates.
  *
  * Default template: image-formatter.html.twig.
  *

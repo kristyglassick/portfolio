@@ -223,7 +223,7 @@ class CKEditorIntegrationTest extends WebDriverTestBase {
     // classes to test the twi template is working properly and picking up our
     // extra class.
     // @see \Drupal\media\Plugin\Filter\MediaEmbed::renderMissingMediaIndicator()
-    // @see core/modules/media/templates/media-embed-error.html.twig
+    // @see core/modules/media/04-templates/media-embed-error.html.twig
     // @see media_test_embed_preprocess_media_embed_error()
     $original_value = $this->host->body->value;
     $this->host->body->value = str_replace($this->media->uuid(), 'invalid_uuid', $original_value);
@@ -235,7 +235,7 @@ class CKEditorIntegrationTest extends WebDriverTestBase {
     $this->assertNotEmpty($assert_session->waitForElement('css', 'drupal-media figure.caption-drupal-media .this-error-message-is-themeable'));
 
     // Test when using the classy theme, an additional class is added in
-    // classy/templates/content/media-embed-error.html.twig.
+    // classy/04-templates/content/media-embed-error.html.twig.
     $this->assertTrue($this->container->get('theme_installer')->install(['classy']));
     $this->config('system.theme')
       ->set('default', 'classy')

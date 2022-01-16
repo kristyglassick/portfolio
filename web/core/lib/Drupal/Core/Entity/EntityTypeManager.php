@@ -101,7 +101,7 @@ class EntityTypeManager extends DefaultPluginManager implements EntityTypeManage
     /** @var \Drupal\Core\Entity\EntityTypeInterface $definition */
     parent::processDefinition($definition, $plugin_id);
 
-    // All link templates must have a leading slash.
+    // All link 04-templates must have a leading slash.
     foreach ((array) $definition->getLinkTemplates() as $link_relation_name => $link_template) {
       if ($link_template[0] != '/') {
         throw new InvalidLinkTemplateException("Link template '$link_relation_name' for entity type '$plugin_id' must start with a leading slash, the current link template is '$link_template'");

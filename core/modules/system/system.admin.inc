@@ -12,7 +12,7 @@ use Drupal\Core\Template\Attribute;
 use Drupal\Core\Url;
 
 /**
- * Prepares variables for administrative content block templates.
+ * Prepares variables for administrative content block 04-templates.
  *
  * Default template: admin-block-content.html.twig.
  *
@@ -40,7 +40,7 @@ function template_preprocess_admin_block_content(&$variables) {
 }
 
 /**
- * Prepares variables for administrative index page templates.
+ * Prepares variables for administrative index page 04-templates.
  *
  * Default template: admin-page.html.twig.
  *
@@ -72,7 +72,7 @@ function template_preprocess_admin_page(&$variables) {
 }
 
 /**
- * Prepares variables for admin index templates.
+ * Prepares variables for admin index 04-templates.
  *
  * Default template: system-admin-index.html.twig.
  *
@@ -109,7 +109,7 @@ function template_preprocess_system_admin_index(&$variables) {
 }
 
 /**
- * Prepares variables for the module details templates.
+ * Prepares variables for the module details 04-templates.
  *
  * Default template: system-modules-details.html.twig.
  *
@@ -199,7 +199,7 @@ function template_preprocess_system_modules_details(&$variables) {
 }
 
 /**
- * Prepares variables for module uninstall templates.
+ * Prepares variables for module uninstall 04-templates.
  *
  * Default template: system-modules-uninstall.html.twig.
  *
@@ -246,7 +246,7 @@ function template_preprocess_system_modules_uninstall(&$variables) {
 }
 
 /**
- * Prepares variables for appearance page templates.
+ * Prepares variables for appearance page 04-templates.
  *
  * Default template: system-themes-page.html.twig.
  *

@@ -1,0 +1,35 @@
+name: Kristy Glassick Portfolio
+type: theme
+base theme: classy
+description: The theme for Kristy Glassick's drupal portfolio.
+package: Custom
+core: 8.x
+core_version_requirement: 8^ || 9^
+regions:
+  status: 'Status'
+  help: 'Help'
+  header_main_menu: 'Header main menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  page_header: 'Page header'
+  page_footer: 'Page footer'
+  page_utilities: 'Page utilities'
+  content_top: 'Content top'
+  content_bottom: 'Content bottom'
+  sidebar_top: 'Sidebar top'
+  sidebar_bottom: 'Sidebar bottom'
+  footer_menu: 'Footer menu'
+components:
+  namespaces:
+    uipatterns:
+      - uipatterns
+    atoms:
+      - uipatterns/01-atoms
+    molecules:
+      - uipatterns/02-molecules
+    organisms:
+      - uipatterns/03-organisms
+    templates:
+      - uipatterns/04-templates
+    pages:
+      - uipatterns/05-pages

@@ -413,7 +413,7 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
   public function getPermissionGranularity();
 
   /**
-   * Gets the link templates using the URI template syntax.
+   * Gets the link 04-templates using the URI template syntax.
    *
    * Links are an array of standard link relations to the URI template that
    * should be used for them. Where possible, link relationships should use

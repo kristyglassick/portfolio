@@ -267,7 +267,7 @@ function color_scheme_form($complete_form, FormStateInterface $form_state, $them
 }
 
 /**
- * Prepares variables for color scheme form templates.
+ * Prepares variables for color scheme form 04-templates.
  *
  * Default template: color-scheme-form.html.twig.
  *

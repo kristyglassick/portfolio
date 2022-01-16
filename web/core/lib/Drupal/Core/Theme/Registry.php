@@ -53,8 +53,8 @@ class Registry implements DestructableInterface {
    *     from; e.g., 'node' for theme hook 'node' of Node module.
    *   - theme path: The effective \Drupal\Core\Theme\ActiveTheme::getPath()
    *      during \Drupal\Core\Theme\ThemeManagerInterface::render(), available
-   *      as 'directory' variable in templates. For functions, it should point
-   *      to the respective theme. For templates, it should point to the
+   *      as 'directory' variable in 04-templates. For functions, it should point
+   *      to the respective theme. For 04-templates, it should point to the
    *      directory that contains the template.
    *   - includes: (optional) An array of include files to load when the theme
    *     hook is executed by \Drupal\Core\Theme\ThemeManagerInterface::render().
@@ -68,8 +68,8 @@ class Registry implements DestructableInterface {
    *     which the render element for this theme hook is provided.
    *   In case of a theme template file:
    *   - path: The path to the template file to use. Defaults to the
-   *     subdirectory 'templates' of the path of the extension implementing
-   *     hook_theme(); e.g., 'core/modules/node/templates' for Node module.
+   *     subdirectory '04-templates' of the path of the extension implementing
+   *     hook_theme(); e.g., 'core/modules/node/04-templates' for Node module.
    *   - template: The basename of the template file to use, without extension
    *     (as the extension is specific to the theme engine). The template file
    *     is in the directory defined by 'path'.
@@ -417,7 +417,7 @@ class Registry implements DestructableInterface {
    *     else. If 'function' is defined, 'template' is not used.
    *   - 'template': The filename of the template generating output for this
    *     theme hook. The template is in the directory defined by the 'path' key
-   *     of hook_theme() or defaults to "$path/templates".
+   *     of hook_theme() or defaults to "$path/04-templates".
    *   - 'variables': The variables for this theme hook as defined in
    *     hook_theme(). If there is more than one implementation and 'variables'
    *     is not specified in a later one, then the previous definition is kept.
@@ -510,7 +510,7 @@ class Registry implements DestructableInterface {
         // if the theme hook specifies a function callback instead, check to
         // ensure the function actually exists.
         if (isset($info['function'])) {
-          trigger_error(sprintf('Theme functions are deprecated in drupal:8.0.0 and are removed from drupal:10.0.0. Use Twig templates instead of %s(). See https://www.drupal.org/node/1831138', $info['function']), E_USER_DEPRECATED);
+          trigger_error(sprintf('Theme functions are deprecated in drupal:8.0.0 and are removed from drupal:10.0.0. Use Twig 04-templates instead of %s(). See https://www.drupal.org/node/1831138', $info['function']), E_USER_DEPRECATED);
           if (!function_exists($info['function'])) {
             throw new \BadFunctionCallException(sprintf(
               'Theme hook "%s" refers to a theme function callback that does not exist: "%s"',
@@ -531,7 +531,7 @@ class Registry implements DestructableInterface {
         // Prepend the current theming path when none is set. This is required
         // for the default theme engine to know where the template lives.
         if (isset($result[$hook]['template']) && !isset($info['path'])) {
-          $result[$hook]['path'] = $path . '/templates';
+          $result[$hook]['path'] = $path . '/04-templates';
         }
 
         // If the default keys are not set, use the default values registered
@@ -568,7 +568,7 @@ class Registry implements DestructableInterface {
           }
           foreach ($prefixes as $prefix) {
             // Only use non-hook-specific variable preprocessors for theming
-            // hooks implemented as templates. See the @defgroup themeable
+            // hooks implemented as 04-templates. See the @defgroup themeable
             // topic.
             if (isset($info['template']) && function_exists($prefix . '_preprocess')) {
               $info['preprocess functions'][] = $prefix . '_preprocess';
@@ -613,7 +613,7 @@ class Registry implements DestructableInterface {
             $cache[$hook]['preprocess functions'] = [];
           }
           // Only use non-hook-specific variable preprocessors for theme hooks
-          // implemented as templates. See the @defgroup themeable topic.
+          // implemented as 04-templates. See the @defgroup themeable topic.
           if (isset($info['template']) && function_exists($name . '_preprocess')) {
             $cache[$hook]['preprocess functions'][] = $name . '_preprocess';
           }

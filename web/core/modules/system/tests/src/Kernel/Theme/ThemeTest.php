@@ -29,7 +29,7 @@ class ThemeTest extends KernelTestBase {
   /**
    * Tests attribute merging.
    *
-   * Render arrays that use a render element and templates (and hence call
+   * Render arrays that use a render element and 04-templates (and hence call
    * template_preprocess()) must ensure the attributes at different occasions
    * are all merged correctly:
    *   - $variables['attributes'] as passed in to the theme hook implementation.

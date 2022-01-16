@@ -5,14 +5,14 @@ namespace Drupal\Tests\Core\Theme;
 use Drupal\Tests\UnitTestCase;
 
 /**
- * Confirms that certain Classy templates have identical equivalents in Stable.
+ * Confirms that certain Classy 04-templates have identical equivalents in Stable.
  *
  * @group Theme
  */
 class ClassyTemplatesIdenticalToStableTest extends UnitTestCase {
 
   /**
-   * Confirms that certain Classy templates have equivalents in Stable.
+   * Confirms that certain Classy 04-templates have equivalents in Stable.
    *
    * @dataProvider providerTestStableTemplatesIdenticalToClassy
    *
@@ -20,15 +20,15 @@ class ClassyTemplatesIdenticalToStableTest extends UnitTestCase {
    *   The template file to test.
    */
   public function testStableTemplatesIdenticalToClassy($template) {
-    $stable_template = $this->root . '/core/themes/stable/templates' . $template;
-    $classy_template = $this->root . '/core/themes/classy/templates' . $template;
+    $stable_template = $this->root . '/core/themes/stable/04-templates' . $template;
+    $classy_template = $this->root . '/core/themes/classy/04-templates' . $template;
     $this->assertFileExists($stable_template);
     $this->assertFileExists($classy_template);
-    $this->assertSame(md5_file($stable_template), md5_file($classy_template), 'The templates should have the same checksums.');
+    $this->assertSame(md5_file($stable_template), md5_file($classy_template), 'The 04-templates should have the same checksums.');
   }
 
   /**
-   * A list of the Classy templates that have identical copies in Stable.
+   * A list of the Classy 04-templates that have identical copies in Stable.
    */
   public function providerTestStableTemplatesIdenticalToClassy() {
     return [

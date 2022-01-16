@@ -53,7 +53,7 @@ class RestResource extends Plugin {
    * The URI paths that this REST resource plugin provides.
    *
    * Key-value pairs, with link relation type plugin IDs as keys, and URL
-   * templates as values.
+   * 04-templates as values.
    *
    * @see core/core.link_relation_types.yml
    *

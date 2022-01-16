@@ -99,7 +99,7 @@ function _drupal_maintenance_theme() {
 }
 
 /**
- * Prepares variables for authorize.php operation report templates.
+ * Prepares variables for authorize.php operation report 04-templates.
  *
  * This report displays the results of an operation run via authorize.php.
  *

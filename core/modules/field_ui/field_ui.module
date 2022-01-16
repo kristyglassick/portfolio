@@ -216,7 +216,7 @@ function field_ui_entity_form_mode_delete(EntityFormModeInterface $form_mode) {
 }
 
 /**
- * Prepares variables for field UI overview table templates.
+ * Prepares variables for field UI overview table 04-templates.
  *
  * Default template: field-ui-table.html.twig.
  *

@@ -41,7 +41,7 @@ class DefaultViewsTest extends UITestBase {
     $edit_href = 'admin/structure/views/view/glossary';
     $this->drupalGet('admin/structure/views');
     // @todo Disabled default views do now appear on the front page. Test this
-    // behavior with templates instead.
+    // behavior with 04-templates instead.
     // $this->assertSession()->linkByHrefNotExists($edit_href);
 
     // Enable the view, and make sure it is now visible on the main listing
@@ -112,7 +112,7 @@ class DefaultViewsTest extends UITestBase {
     // Now disable the view, and make sure it stops appearing on the main view
     // listing page but instead goes back to displaying on the disabled views
     // listing page.
-    // @todo Test this behavior with templates instead.
+    // @todo Test this behavior with 04-templates instead.
     $this->drupalGet('admin/structure/views');
     $this->clickViewsOperationLink('Disable', '/glossary/');
     // $this->assertSession()->addressEquals('admin/structure/views');

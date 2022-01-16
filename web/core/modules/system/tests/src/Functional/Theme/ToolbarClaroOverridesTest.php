@@ -129,7 +129,7 @@ class ToolbarClaroOverridesTest extends BrowserTestBase {
     // Confirm toolbar is processed by claro_preprocess_toolbar().
     $this->assertTrue($this->getSession()->getPage()->find('css', '#toolbar-administration')->hasAttribute('data-drupal-claro-processed-toolbar'));
 
-    // Confirm toolbar templates are loaded from Claro.
+    // Confirm toolbar 04-templates are loaded from Claro.
     $this->assertTrue($this->getSession()->getPage()->find('css', '.toolbar')->hasClass('claro-toolbar'));
     $this->assertTrue($this->getSession()->getPage()->find('css', '.toolbar-menu')->hasClass('claro-toolbar-menu'));
   }

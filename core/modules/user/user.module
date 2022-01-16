@@ -104,7 +104,7 @@ function user_js_settings_alter(&$settings, AttachedAssetsInterface $assets) {
 /**
  * Returns whether this site supports the default user picture feature.
  *
- * This approach preserves compatibility with node/comment templates. Alternate
+ * This approach preserves compatibility with node/comment 04-templates. Alternate
  * user picture implementations (e.g., Gravatar) should provide their own
  * add/edit/delete forms and populate the 'picture' variable during the
  * preprocess stage.
@@ -332,7 +332,7 @@ function user_user_view_alter(array &$build, UserInterface $account, EntityViewD
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block templates.
+ * Implements hook_preprocess_HOOK() for block 04-templates.
  */
 function user_preprocess_block(&$variables) {
   if ($variables['configuration']['provider'] == 'user') {
@@ -362,7 +362,7 @@ function user_template_preprocess_default_variables_alter(&$variables) {
 }
 
 /**
- * Prepares variables for username templates.
+ * Prepares variables for username 04-templates.
  *
  * Default template: username.html.twig.
  *
@@ -1235,7 +1235,7 @@ function user_logout() {
 }
 
 /**
- * Prepares variables for user templates.
+ * Prepares variables for user 04-templates.
  *
  * Default template: user.html.twig.
  *
@@ -1249,7 +1249,7 @@ function user_logout() {
  */
 function template_preprocess_user(&$variables) {
   $variables['user'] = $variables['elements']['#user'];
-  // Helpful $content variable for templates.
+  // Helpful $content variable for 04-templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }

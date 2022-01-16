@@ -17,7 +17,7 @@ use Drupal\views\ViewExecutable;
  * Plugins that control how the collection of results is rendered in a view.
  *
  * Style plugins control how a view is displayed. For the most part, they are
- * object wrappers around theme templates. Examples of styles include HTML
+ * object wrappers around theme 04-templates. Examples of styles include HTML
  * lists, tables, full or teaser content views, etc.
  *
  * Many (but not all) style plugins have an optional row plugin, which
@@ -690,7 +690,7 @@ abstract class StylePluginBase extends PluginBase {
           $this->view->row_index = $index;
 
           // Here we implement render caching for result rows. Since we never
-          // build a render array for single rows, given that style templates
+          // build a render array for single rows, given that style 04-templates
           // need individual field markup to support proper theming, we build
           // a raw render array containing all field render arrays and cache it.
           // This allows us to cache the markup of the various children, that is

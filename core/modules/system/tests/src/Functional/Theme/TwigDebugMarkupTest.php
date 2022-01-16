@@ -42,7 +42,7 @@ class TwigDebugMarkupTest extends BrowserTestBase {
     $this->resetAll();
 
     $cache = $this->container->get('theme.registry')->get();
-    // Create array of Twig templates.
+    // Create array of Twig 04-templates.
     $templates = drupal_find_theme_templates($cache, $extension, $this->getThemePath('test_theme'));
     $templates += drupal_find_theme_templates($cache, $extension, $this->getModulePath('node'));
 

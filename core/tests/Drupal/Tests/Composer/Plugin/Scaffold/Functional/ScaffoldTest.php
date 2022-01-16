@@ -83,7 +83,7 @@ class ScaffoldTest extends TestCase {
    *   core/tests/Drupal/Tests/Component/Scaffold/fixtures.
    * @param array $replacements
    *   Key : value mappings for placeholders to replace in composer.json
-   *   templates.
+   *   04-templates.
    *
    * @return string
    *   The path to the created System-Under-Test.

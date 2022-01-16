@@ -8,7 +8,7 @@
 use Drupal\Core\Url;
 
 /**
- * Prepares variables for security advisories fetch error message templates.
+ * Prepares variables for security advisories fetch error message 04-templates.
  *
  * Default template: system-security-advisories-fetch-error-message.html.twig.
  *
